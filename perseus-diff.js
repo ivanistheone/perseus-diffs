@@ -70,16 +70,15 @@ $('body').append('<div id="perseus-diff-ui"> <a href="#" id="perseus-diff-get">g
 
 
 
-
+// for each exercise, generate a latex section
 var generate_tex = function ( ex_json ){
     var tex = "";
     var idx;
 
-    tex += "\n\n\\section{" + ex_json.id + "}" ;
-    tex += "\\url{https://www.khanacademy.org/devadmin/content/items/" + ex_json.id + "}\n\n";
+    tex += "\n\n\\section{\\href{https://www.khanacademy.org/devadmin/content/items/" + ex_json.id + "}{" + ex_json.id + "}" + "}\n\n" ;
     tex += ex_json.itemData.question.content ;
     tex += "\n\n";
-    tex += ex_json.itemData.answerArea.options.content;
+    tex += "\\paragraph{Ans}" + ex_json.itemData.answerArea.options.content;
     tex += "\n\n";
     for (idx in ex_json.itemData.hints ){
         tex += "\\paragraph{Hint " + (Number(idx)+1)  + "}" ;
@@ -92,6 +91,14 @@ var generate_tex = function ( ex_json ){
 }
 
 
+// fixup  $\begin{align} --> \begin{align} //              \end{align}$ --> \end{align}
+var fixup_aligns = function ( doc ){
+    var tmpdoc, tmpdoc2;
+    doc = doc.replace( /\$[ ]*\\begin{align[\*]?}/g, "\\begin{align*}" );
+    doc = doc.replace( /\\end{align[\*]?}[ ]*\$/g, "\\end{align*}" );
+
+    return doc;
+}
 
 
 var extract_exercises_as_tex = function () {
@@ -107,13 +114,13 @@ var extract_exercises_as_tex = function () {
         data_new,       // a "hack" to put json data into myitem_json
         texdoc="";      // where the final latex source will be stored
 
-
     // get list of urls for all exercises on current page
     var list_of_urls =  $("td .simple-button").map( function(){ return $(this).attr('href'); }).get();
+    list_of_urls.sort();    // normalize order 
 
-    texdoc += "\\documentclass[10pt]{article}\n";
-    texdoc += "\\title{Khan exercises}\n"
-    texdoc += " \\usepackage{amsmath,hyperref}\n \\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n\n\n"
+    texdoc += "\\documentclass[twocolumn,10pt]{article}\n";
+    texdoc += "\\title{Khan exercises}\n"; 
+    texdoc += " \\usepackage{amsmath,hyperref,cancel}\n\\usepackage[margin=1cm]{geometry}\n\\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n  \\newcommand{\\pink}[1]{{\\color{Magenta}#1}}   \n\n\n"
     texdoc += "\\begin{document}\n\\maketitle\n\n";
 
     for( idx in list_of_urls ){
@@ -138,18 +145,7 @@ var extract_exercises_as_tex = function () {
     texdoc += "\\end{document}\n\n";
     console.log(" done ");
 
-    return texdoc;
-
+    return fixup_aligns(texdoc);
 }
 
-
-// fixup  $\begin{align} --> \begin{align}
-//              \end{align}$ --> \end{align}
-var fixup_aligns = function ( doc ){
-    var tmpdoc, tmpdoc2;
-    doc = doc.replace( /\$[ ]*\\begin{align[\*]?}/g, "\\begin{align*}" );
-    doc = doc.replace( /\\end{align[\*]?}[ ]*\$/g, "\\end{align*}" );
-
-    return doc;
-}
 
