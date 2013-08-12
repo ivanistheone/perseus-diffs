@@ -1,95 +1,57 @@
 
 
 
-
-/*
- * DOMParser HTML extension
- * 2012-09-04
- * 
- * By Eli Grey, http://eligrey.com
- * Public domain.
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
- */
-
-/*! @source https://gist.github.com/1129031 */
-/*global document, DOMParser*/
-
-(function(DOMParser) {
-    "use strict";
-
-    var
-      DOMParser_proto = DOMParser.prototype
-    , real_parseFromString = DOMParser_proto.parseFromString
-    ;
-
-    // Firefox/Opera/IE throw errors on unsupported types
-    try {
-        // WebKit returns null on unsupported types
-        if ((new DOMParser).parseFromString("", "text/html")) {
-            // text/html parsing is natively supported
-            return;
-        }
-    } catch (ex) {}
-
-    DOMParser_proto.parseFromString = function(markup, type) {
-        if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-            var
-              doc = document.implementation.createHTMLDocument("")
-            ;
-                if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-                    doc.documentElement.innerHTML = markup;
-                }
-                else {
-                    doc.body.innerHTML = markup;
-                }
-            return doc;
-        } else {
-            return real_parseFromString.apply(this, arguments);
-        }
-    };
-}(DOMParser));
-
-
-
-// load prereq scripts
-// PROBLEM --- need https 
-/* 
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.src = "//ivanistheone.github.io/ideacollector/js/vendor/FileSaver.js";
-$("head").append(s);
-
-// TODO: submit to cdnjs --
-*/
+    // load prereq scripts
+    // PROBLEM --- need https 
+    /* 
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//ivanistheone.github.io/ideacollector/js/vendor/FileSaver.js";
+    $("head").append(s);
+    
+    // TODO: submit to cdnjs --
+    */
 
 
 
 // setup UI
-$('body').append('<div id="perseus-diff-ui"> <a href="#" id="perseus-diff-get">get diff</a> </div>' );
+//$('body').append('<div id="perseus-diff-ui"> <a href="#" id="perseus-diff-get">get diff</a> </div>' );
 
 
-
-
-// for each exercise, generate a latex section
-var generate_tex = function ( ex_json ){
+// generate a latex section with exercise content
+var generate_tex = function ( ex_json, figures ){
     var tex = "";
     var idx;
 
-    tex += "\n\n\\section{\\href{https://www.khanacademy.org/devadmin/content/items/" + ex_json.id + "}{" + ex_json.id + "}" + "}\n\n" ;
-    tex += ex_json.itemData.question.content ;
+    tex += "\n\n\\section{\\href{https://www.khanacademy.org/devadmin/content/items/" + ex_json.id + "}{" + ex_json.id + "}"  +"}\n\n" ;
+    tex += "\\noindent\n" + handle_graphics( ex_json.itemData.question.content, figures);
     tex += "\n\n";
     tex += "\\paragraph{Ans}" + ex_json.itemData.answerArea.options.content;
+    if ( ex_json.itemData.answerArea.options.widgets["expression 1"] ){
+        tex += " " + ex_json.itemData.answerArea.options.widgets["expression 1"].options.value;
+    }
     tex += "\n\n";
     for (idx in ex_json.itemData.hints ){
         tex += "\\paragraph{Hint " + (Number(idx)+1)  + "}" ;
-        tex += ex_json.itemData.hints[idx].content;
+        tex += handle_graphics( ex_json.itemData.hints[idx].content, figures);
         tex += "\n\n";
     }
     tex += "\n\n";
+    
+    // metadata
+    tex += "\\medskip\n\\noindent\n";
+    tex += "\\textbf{Tags:} {\\footnotesize " + ex_json.tags_parsed.join(", ") + "}\\\\\n";
+    tex += "\\textbf{Version:} "+ ex_json.revisionData[0].sha.substring(0,8) + ".. " + ex_json.revisionData[0].creationDate + "\n";
+    tex += "\\smallskip\\hrule\n\n\n\n";
 
     return tex;
 }
 
+
+//  replaces 
+var handle_graphics = function (text, figures) {
+    return text.replace(/!\[\]\(.*?.\)/g, "$\\langle$ img $\\rangle$\n");
+}
 
 // fixup  $\begin{align} --> \begin{align} //              \end{align}$ --> \end{align}
 var fixup_aligns = function ( doc ){
@@ -101,26 +63,75 @@ var fixup_aligns = function ( doc ){
 }
 
 
-var extract_exercises_as_tex = function () {
-    // define vars 
-    var idx,            // index into  list_of_urls 
-        url,            // 
-        html,           // the rar HTML source of the exercise page
+// extracts the JSON data for an exercise url
+var fetch_exercise_json = function ( ex_url ){
+    var html,           // the rar HTML source of the exercise page
         parser,         // an HTML parser 
-        dom,            // parsed HTML
+        $dom,           // parsed HTML
         script_list,    // all <script> tags on the exercise --- we want the last one
         data_raw,       // a function closure which calls editItemInit 
         myitem_json,    // where we want the data to go
         data_new,       // a "hack" to put json data into myitem_json
-        texdoc="";      // where the final latex source will be stored
+        idx,            // loop idx for tags
+        tag_id,         // long tag id tag 
+        tag_name;       // human readable tag name
+
+    html ="";
+    $.ajax({ url: ex_url, type: 'get', dataType: 'html', async: false, success: function(data) { html = data; } });
+    
+    $dom =  $(html);
+    scripts_list = $dom.filter('script').get();
+    data_raw = scripts_list[scripts_list.length-1].innerHTML;
+    data_new = data_raw.replace("PerseusAdmin.editItemInit(item);", "myitem_json=item;") ;
+    eval(data_new);
+
+    // parse tags into usable strings
+    myitem_json["tags_parsed"] = [];
+    for (idx in myitem_json.tags ) {
+        if( myitem_json.tags.hasOwnProperty(idx) ){
+            tag_id = myitem_json.tags[idx];
+            tag_name = $dom.find('#ai-tag-filter-container').find("[value='" + tag_id +"']").text();
+            myitem_json["tags_parsed"].push( tag_name.replace("Math.", "") );
+        }
+    }
+
+    return myitem_json;
+
+}
+
+var extract_exercises_as_tex = function ( list_of_tag_names ) {
+// define vars 
+    var idx,idx2,           // indices into lists of urls
+        url,                // 
+        ex_json,            // the json repr. of an exercise
+        texdoc="",          // where the final latex source will be stored
+        list_of_urls,       // list of URLs to visit
+        sublist_of_urls;       // list of URLs to visit
 
     // get list of urls for all exercises on current page
-    var list_of_urls =  $("td .simple-button").map( function(){ return $(this).attr('href'); }).get();
-    list_of_urls.sort();    // normalize order 
+    if (!list_of_tag_names) {
+        list_of_urls =  $("td .simple-button").map( function(){ return $(this).attr('href'); }).get();
+        list_of_urls.sort();    // normalize order 
+    } else {
+        list_of_urls = [];
+        // iterite over list of tag names 
+        for (idx in list_of_tag_names ){
+            sublist_of_urls = $("tr:contains('"+list_of_tag_names[idx] + "')").find("a").map( function(){ return $(this).attr('href'); }).get();   
+            console.log("Processing " + sublist_of_urls.length + " urls for tag " + list_of_tag_names[idx] );
+            sublist_of_urls = sublist_of_urls.sort();
+            for (idx2 in sublist_of_urls ) { 
+                 if  ( $.inArray( sublist_of_urls[idx2], list_of_urls) < 0 ) {   // only add if (not found)=(-1)
+                    list_of_urls.push( sublist_of_urls[idx2] );
+                 }
+            } // end of list_of_urls.extend (uniq) 
+            
+        } //for        
+    } //else
+
 
     texdoc += "\\documentclass[twocolumn,10pt]{article}\n";
     texdoc += "\\title{Khan exercises}\n"; 
-    texdoc += " \\usepackage{amsmath,hyperref,cancel}\n\\usepackage[margin=1cm]{geometry}\n\\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n  \\newcommand{\\pink}[1]{{\\color{Magenta}#1}}   \n\n\n"
+    texdoc += "\\setlength{\\columnsep}{20pt} \n\\usepackage{amsmath,hyperref,cancel}\n\\usepackage[margin=1.5cm]{geometry}\n\\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n  \\newcommand{\\pink}[1]{{\\color{Magenta}#1}}   \n\n\n"
     texdoc += "\\begin{document}\n\\maketitle\n\n";
 
     for( idx in list_of_urls ){
@@ -128,18 +139,9 @@ var extract_exercises_as_tex = function () {
         url = list_of_urls[idx];
         console.log(" processing " + url );
 
-        // extracts the JSON data from an exercise
-        html ="";
-        $.ajax({ url: url, type: 'get', dataType: 'html', async: false, success: function(data) { html = data; } });
-        
-        parser = new DOMParser();
-        dom = parser.parseFromString( html, "text/html" );
-        scripts_list = dom.getElementsByTagName('script');
-        data_raw = scripts_list[scripts_list.length-1].innerHTML;
-        data_new = data_raw.replace("PerseusAdmin.editItemInit(item);", "myitem_json=item;") ;
-        eval(data_new);
+        ex_json = fetch_exercise_json( url );   // extracts the JSON data from an exercise
 
-        texdoc +=  generate_tex( myitem_json );
+        texdoc +=  generate_tex( ex_json );
         
     }
     texdoc += "\\end{document}\n\n";
