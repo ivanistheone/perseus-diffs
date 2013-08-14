@@ -50,7 +50,22 @@ var generate_tex = function ( ex_json, figures ){
 
 //  replaces 
 var handle_graphics = function (text, figures) {
-    return text.replace(/!\[\]\(.*?.\)/g, "$\\langle$ img $\\rangle$\n");
+
+    var image_re = /\!\[.*?\]\((.*?)\)/g;  
+    
+    text = text.replace( image_re, function ($0,$1) {        // $1 is the url of the img
+        var list,
+            filename;
+
+        list = $1.split("/");
+        filename = list[list.length-1];
+        figures[filename] = $1; 
+        return "\\includegraphics[scale=\\shrinkfactor]{figures/" + filename + "}";
+    });
+
+    return text;
+
+
 }
 
 // fixup  $\begin{align} --> \begin{align} //              \end{align}$ --> \end{align}
@@ -106,13 +121,16 @@ var extract_exercises_as_tex = function ( list_of_tag_names ) {
         ex_json,            // the json repr. of an exercise
         texdoc="",          // where the final latex source will be stored
         list_of_urls,       // list of URLs to visit
-        sublist_of_urls;       // list of URLs to visit
+        figures = {},       // { filename:url }  hash for images ![](url)  
+        sublist_of_urls;    // list of URLs to visit
 
-    // get list of urls for all exercises on current page
+
     if (!list_of_tag_names) {
+        // get list of urls for all exercises on current page
         list_of_urls =  $("td .simple-button").map( function(){ return $(this).attr('href'); }).get();
         list_of_urls.sort();    // normalize order 
     } else {
+        // construct list of urls from tags specified
         list_of_urls = [];
         // iterite over list of tag names 
         for (idx in list_of_tag_names ){
@@ -131,9 +149,10 @@ var extract_exercises_as_tex = function ( list_of_tag_names ) {
 
     texdoc += "\\documentclass[twocolumn,10pt]{article}\n";
     texdoc += "\\title{Khan exercises}\n"; 
-    texdoc += "\\setlength{\\columnsep}{20pt} \n\\usepackage{amsmath,hyperref,cancel}\n\\usepackage[margin=1.5cm]{geometry}\n\\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n  \\newcommand{\\pink}[1]{{\\color{Magenta}#1}}   \n\n\n"
+    texdoc += "\\setlength{\\columnsep}{20pt} \n\\usepackage{amsmath,hyperref,cancel,graphicx}\n \\def\\shrinkfactor{0.55}\n \\usepackage[margin=1.5cm]{geometry}\n\\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n  \\newcommand{\\pink}[1]{{\\color{Magenta}#1}}   \n\n\n"
     texdoc += "\\begin{document}\n\\maketitle\n\n";
 
+    
     for( idx in list_of_urls ){
 
         url = list_of_urls[idx];
@@ -141,9 +160,19 @@ var extract_exercises_as_tex = function ( list_of_tag_names ) {
 
         ex_json = fetch_exercise_json( url );   // extracts the JSON data from an exercise
 
-        texdoc +=  generate_tex( ex_json );
+        texdoc +=  generate_tex( ex_json, figures);
         
     }
+    
+    // append command for getting pulling in .pngs via wget
+    texdoc += "%%  Create a directory called 'figures' in latex dir and run the following command \n"
+    texdoc += "%  wget \\\n"
+    for ( idx in figures ) {
+        url = figures[idx];
+        texdoc += "%    " + url + " \\\n";
+    }
+    texdoc += "\n\n"
+    
     texdoc += "\\end{document}\n\n";
     console.log(" done ");
 
