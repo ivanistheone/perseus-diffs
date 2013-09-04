@@ -26,8 +26,18 @@ var generate_tex = function ( ex_json, figures ){
     tex += "\n\n\\section{\\href{https://www.khanacademy.org/devadmin/content/items/" + ex_json.id + "}{" + ex_json.id + "}"  +"}\n\n" ;
     tex += "\\noindent\n" + handle_graphics( ex_json.itemData.question.content, figures);
     tex += "\n\n";
-    tex += "\\paragraph{Ans}" + ex_json.itemData.answerArea.options.content;
-    if ( ex_json.itemData.answerArea.options.widgets["expression 1"] ){
+    tex += "\\paragraph{Ans} "
+    if( ex_json.itemData.answerArea.options.content){
+        tex += ex_json.itemData.answerArea.options.content + " "; 
+    }
+    if ( ex_json.itemData.answerArea.type === "expression"){
+        tex += " $" + ex_json.itemData.answerArea.options.value +"$ ";
+    }
+    // custom format (use first answers)
+    if ( ex_json.itemData.answerArea.options.widgets && ex_json.itemData.answerArea.options.widgets["input-number 1"] ){
+        tex += " " + ex_json.itemData.answerArea.options.widgets["input-number 1"].options.value;
+    }
+    if ( ex_json.itemData.answerArea.options.widgets && ex_json.itemData.answerArea.options.widgets["expression 1"] ){
         tex += " " + ex_json.itemData.answerArea.options.widgets["expression 1"].options.value;
     }
     tex += "\n\n";
@@ -178,5 +188,10 @@ var extract_exercises_as_tex = function ( list_of_tag_names ) {
 
     return fixup_aligns(texdoc);
 }
+
+
+// usage:
+// doc = extract_exercises_as_tex( ["Constructing linear functions.1", "Constructing linear functions.2", "Constructing linear functions.3"] );
+
 
 
