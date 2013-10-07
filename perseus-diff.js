@@ -33,6 +33,20 @@ var generate_tex = function ( ex_json, figures ){
     if ( ex_json.itemData.answerArea.type === "expression"){
         tex += " $" + ex_json.itemData.answerArea.options.value +"$ ";
     }
+    // multiple choice
+    var mc_item;
+    if ( ex_json.itemData.answerArea.type === "radio"){
+        tex += "\n\n"
+        // for each answer 
+        for (idx in ex_json.itemData.answerArea.options.choices ){
+            mc_item = ex_json.itemData.answerArea.options.choices[idx];
+            if( mc_item.correct){ tex += "\\fbox{ "; }
+            tex += handle_graphics( mc_item.content, figures);
+            tex += "\n\n"
+            if( mc_item.correct){ tex += "}\n\n "; }
+        }
+    }
+
     // custom format (use first answers)
     if ( ex_json.itemData.answerArea.options.widgets && ex_json.itemData.answerArea.options.widgets["input-number 1"] ){
         tex += " " + ex_json.itemData.answerArea.options.widgets["input-number 1"].options.value;
@@ -70,7 +84,7 @@ var handle_graphics = function (text, figures) {
         list = $1.split("/");
         filename = list[list.length-1];
         figures[filename] = $1; 
-        return "\\includegraphics[scale=\\shrinkfactor]{figures/" + filename + "}";
+        return "\n\\includegraphics[scale=\\shrinkfactor]{figures/" + filename + "}";
     });
 
     return text;
@@ -176,7 +190,7 @@ var extract_exercises_as_tex = function ( list_of_tag_names ) {
     
     // append command for getting pulling in .pngs via wget
     texdoc += "%%  Create a directory called 'figures' in latex dir and run the following command \n"
-    texdoc += "%  wget \\\n"
+    texdoc += "%  wget -N \\\n"
     for ( idx in figures ) {
         url = figures[idx];
         texdoc += "%    " + url + " \\\n";
