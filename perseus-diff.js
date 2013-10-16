@@ -173,7 +173,7 @@ var extract_exercises_as_tex = function ( list_of_tag_names ) {
 
     texdoc += "\\documentclass[twocolumn,10pt]{article}\n";
     texdoc += "\\title{Khan exercises}\n"; 
-    texdoc += "\\setlength{\\columnsep}{20pt} \n\\usepackage{amsmath,hyperref,cancel,graphicx}\n \\def\\shrinkfactor{0.55}\n \\usepackage[margin=1.5cm]{geometry}\n\\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n  \\newcommand{\\pink}[1]{{\\color{Magenta}#1}}   \n\n\n"
+    texdoc += "\\setlength{\\columnsep}{20pt} \n\\usepackage{amsmath,hyperref,cancel,graphicx}\n \\def\\shrinkfactor{0.45}\n \\usepackage[margin=1.5cm]{geometry}\n\\usepackage[usenames,dvipsnames]{color}\n \n \\newcommand{\\blue}[1]{{\\color{Blue}#1}} \n \\newcommand{\\purple}[1]{{\\color{Purple}#1}} \n \\newcommand{\\red}[1]{{\\color{Red}#1}} \n \\newcommand{\\green}[1]{{\\color{Green}#1}} \n \\newcommand{\\gray}[1]{{\\color{Gray}#1}} \n  \\newcommand{\\pink}[1]{{\\color{Magenta}#1}}   \n\n\n"
     texdoc += "\\begin{document}\n\\maketitle\n\n";
 
     
