@@ -14,6 +14,7 @@
   \newcommand{\pink}[1]{{\color{Magenta}#1}}   
 
 
+
 \begin{document}
 \maketitle
 
@@ -22,18 +23,22 @@
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x06b1691221f6ea7d}{x06b1691221f6ea7d}}
 
 \noindent
-The Gangas are moving from Minneapolis to Mongolia. They pack their belongings in rectangular crates and hire a boxcar to ship the crates across land and sea.  The crates are made specifically to fit inside the boxcar with their bases facing down. Each crate has a base $10.1\text{ ft}$ long by $6\text{ ft}$ wide and height $10\text{ ft}$. The boxcar is $50.5\text{ ft}$ long, $12\text{ ft}$ wide and $10\text{ ft}$ high. 
+The Gangas are moving from Minneapolis to Mongolia. They pack their belongings in rectangular crates and hire a boxcar to ship the crates across land and sea.  Each crate has a base $10.1\text{ ft}$ long by $6\text{ ft}$ wide and height $10\text{ ft}$. The crates are made specifically to fit inside the boxcar. The boxcar is $50.5\text{ ft}$ long, $12\text{ ft}$ wide and $10\text{ ft}$ high. 
 
-**How many crates can The Gangas fit into one boxcar?**
+**How many crates can fit into one boxcar?**
 
 
 \includegraphics[scale=\shrinkfactor]{figures/203f27adba8bd870f05dc901ffbda2840eaf7d90.jpeg}
 
 \paragraph{Ans} [[? input-number 1]] crates  10
 
-\paragraph{Hint 1}Let's find the relationship between the lengths, widths and heights of the crate and boxcar:
+\paragraph{Hint 1}Let's find the relationship between the lengths, widths and heights of the crate and the boxcar:
 
-\begin{align*} 10.1\text{ ft}\times5&=50.5\text{ ft}\\\\6\text{ ft}\times2&=12\text{ ft}\\\\10\text{ ft}\times1&=10\text{ ft}\end{align*}
+\begin{align*} 
+10.1\text{ ft}\times5 &=50.5\text{ ft}  \\[2mm]
+6\text{ ft}\times2      &=12\text{ ft}  \\[2mm]
+10\text{ ft}\times1     &=10\text{ ft}
+\end{align*}
 
 \paragraph{Hint 2}Because the dimensions of the crate and boxcar are related, we can relate the volumes of the crate and boxcar in cubic feet. If we divide the volume of the boxcar by the volume of a crate, we can find how many crates The Gangas can fit into one boxcar.
 
@@ -41,17 +46,34 @@ The formula for volume $V$ of a rectangular prism is:
 
 $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 
-\paragraph{Hint 3}Let's find  $V$ of the boxcar in cubic feet:
+\paragraph{Hint 3}Let's find the volume of the boxcar in cubic feet:
 
-\begin{align*} \text{V} &= \text{length}\cdot\text{width}\cdot\text{height}\\&=50.5\times12\times10\\&=\blue{6060}\text{ ft}^3\end{align*}
+\begin{align*} 
+\blue{\text{V}_{\text{boxcar}}}
+&= \text{length}\cdot\text{width}\cdot\text{height}\\[2mm]
+&=50.5\times12\times10\\[2mm]
+&=\blue{6060}\text{ ft}^3
+\end{align*}
 
-\paragraph{Hint 4}Let's find  $V$ of a crate in cubic feet:
+\paragraph{Hint 4}Let's find  the volume of one crate in cubic feet:
 
-\begin{align*} \text{V} &= \text{length}\cdot\text{width}\cdot\text{height}\\&=10.1\times6\times10\\&=\pink{606}\text{ ft}^3\end{align*}
+\begin{align*}
+\pink{\text{V}_{\text{crate}}}
+&= \text{length}\cdot\text{width}\cdot\text{height}\\[2mm]
+&=10.1\times6\times10\\[2mm]
+&=\pink{606}\text{ ft}^3
+\end{align*}
 
-\paragraph{Hint 5}Now, let's divide the volume of the boxcar by the volume of a crate to find how many crates:
+\paragraph{Hint 5}To find how many crates fit in one boxcar, we can divide the volume of the boxcar by the volume of a crate: 
 
-\begin{align*}\ &=\blue{6060}\div\pink{606}\\&=\green{10}\end{align*}
+\begin{align*}
+\dfrac{
+  \blue{\text{V}_{\text{boxcar}}}
+}{
+  \pink{\text{V}_{\text{crate}}}
+}
+&=\dfrac{\blue{6060}}{\pink{606}}\\[1mm]
+&=\ \green{10}\end{align*}
 
 \paragraph{Hint 6}The Gangas can fit $\green{10}$ crates into one boxcar.
 
@@ -60,7 +82,7 @@ $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Image needs attribution,  Area, volume, and surface area of 2d and 3d objects, CC.7.G.B.6}\\
-\textbf{Version:} 5ad75d6d.. 2013-10-14
+\textbf{Version:} 8eb9ce46.. 2013-10-18
 \smallskip\hrule
 
 
@@ -72,12 +94,13 @@ $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 \noindent
 Abuto plans to put in wall-to-wall carpet in his living room. He measures the edges of his living room and sketches up the following floor plan. The carpet costs $\$30$ per square meter. 
 
-**How much will Abuto pay for wall-to-wall carpet for his living room?**
+**How much will Abuto pay for wall-to-wall carpet for his entire living room?**   
+
 \includegraphics[scale=\shrinkfactor]{figures/9b1e5c4a0a1124465ed46125df08ae907b12b004.png}
 
 \paragraph{Ans} $\$$ [[? input-number 1]]  57
 
-\paragraph{Hint 1}Abuto's living room has $3$ rectangular areas and $1$ triangular area to cover with carpet. Let's find the total area of the living room floor in square feet to find how much carpet Abuto needs.
+\paragraph{Hint 1}Abuto's living room has $3$ rectangular areas and $1$ triangular area to cover with carpet. Let's find the total area of the living room floor in square meters to find how much carpet Abuto needs.
 
 Area of a rectangle is equal to its length times its width. Area of a triangle is equal to one half its base times its height. 
 
@@ -87,12 +110,15 @@ Area of a rectangle is equal to its length times its width. Area of a triangle i
 \paragraph{Hint 3}Let's find the total area of the living room by adding the areas of the $3$ rectangles and $1$ triangle together. 
 
 \begin{align*}  
-&= 0.8\times1 +0.8\times0.4+0.6\times1.1+ 0.5\times0.6\times\red{0.4}\\\\&=0.8+0.32+0.66+0.12\\\\
-&= \purple{1.9} \text{ m}^2\end{align*}
+\purple{\text{total area}} &= 0.8\times1  \ +\ 0.8\times 0.4\ +\ 0.6\times1.1 \ +\  \dfrac{1}{2}\times0.6\times\red{0.4}\\[2mm]
+&=0.8+0.32+0.66+0.12\\[2mm]
+&= \purple{1.9} \text{ m}^2
+\end{align*}
 
 \paragraph{Hint 4}Abuto has $\purple{1.9}\text{ m}^2$ to cover with carpet, and the cost of carpet is $\$\green{30}$ per square meter. Let's multiply the total area times the cost per area:
 
-\begin{align*} &= \green{30}\times\purple{1.9}\\&=\$\blue{ 57}\end{align*}
+\begin{align*} 
+\blue{\text{total cost}} &= \green{30}\times\purple{1.9}\\&=\$\blue{ 57}\end{align*}
 
 \paragraph{Hint 5}Abuto will pay $\$\blue{57}$ to install wall-to-wall carpet in his living room.
 
@@ -101,7 +127,7 @@ Area of a rectangle is equal to its length times its width. Area of a triangle i
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Images with English text,  Area, volume, and surface area of 2d and 3d objects, CC.7.G.B.6}\\
-\textbf{Version:} b75c2b50.. 2013-10-14
+\textbf{Version:} 69a87b02.. 2013-10-18
 \smallskip\hrule
 
 
@@ -130,7 +156,7 @@ Area of a rectangle is equal to its length times its width. Area of a triangle i
 \paragraph{Hint 3}Let's find the total area of the living room by adding the areas of the $3$ rectangles and $1$ triangle together. 
 
 \begin{align*}  
-&= 2.4\times1.2 +2.4^2+1.2\times3.0+ 0.5\times1.2\times\red{1.2}\\\\&=2.88+5.76+3.6+0.72\\\\
+&= 2.4\times1.2 +2.4^2+1.2\times3.0+ \frac{1}{2}\times1.2\times\red{1.2}\\\\&=2.88+5.76+3.6+0.72\\\\
 &= \purple{12.96} \text{ m}^2\end{align*}
 
 \paragraph{Hint 4}Tony needs $\purple{12.96}$ m$^2$ of carpet to cover the entire area of his living room floor.
@@ -140,7 +166,7 @@ Area of a rectangle is equal to its length times its width. Area of a triangle i
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Images with English text,  Area, volume, and surface area of 2d and 3d objects, CC.7.G.B.6}\\
-\textbf{Version:} 4ff39c7b.. 2013-10-11
+\textbf{Version:} 8ee1b817.. 2013-10-18
 \smallskip\hrule
 
 
@@ -150,37 +176,44 @@ Area of a rectangle is equal to its length times its width. Area of a triangle i
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x10eb0d14b6e1f311}{x10eb0d14b6e1f311}}
 
 \noindent
-The company Sweet as Pie has $500$ mile-high pumpkin pies to make for Thanksgiving. They package their pies each in a folded box made out of cardboard. The closed box is a cube with side lengths $9\text{ in}$. There are $7$ rectangular tabs that wrap around the edges to make sure the pies stay fresh. The tabs are $9\text{ in}$ by $2\text{ in}$ each.
+The company Sweet as Pie has $500$ mile-high pumpkin pies to make for Thanksgiving. They package their pies each in a folded box made of cardboard. The closed box is a cube with side lengths $9\text{ in}$. There are $7$ rectangular tabs that wrap around the edges to make sure the pies stay fresh. The tabs are $9\text{ in}$ by $2\text{ in}$ each.
 
-**In square inches what is the minimum amount of cardboard Sweet as Pie needs to package all $500$ pumpkin pies individually? (Assume there is no wasted cardboard.)**
+**In square inches what is the minimum amount of cardboard Sweet as Pie needs to package all $500$ pumpkin pies individually?**   
+
+(Assume there is no wasted cardboard.)  
+
 \includegraphics[scale=\shrinkfactor]{figures/9ee87af5745eecf3946aa60a923f2788c1dea2bf.png}
 
 \paragraph{Ans} [[? input-number 1]] $\text{in}^2$  306000
 
-\paragraph{Hint 1}Let’s determine the surface area (SA) of one box in square inches. Then, we can multiply the surface area of one box times $\gray{500}$ to find how many square inches of cardboard are needed.
+\paragraph{Hint 1}Let's determine the surface area (SA) of one box in square inches. Then, we can multiply the surface area of one box times $\gray{500}$ to find how many square inches of cardboard are needed.
 
 The box has is a cube, so it has $\green6$ square sides. The box also has $\purple7$ rectangular tabs.
 
-\paragraph{Hint 2}Let’s find the total surface area of the box. Area of a rectangle is equal to its length times its width. Let's find the surface areas of the $\green6$ square sides and $\purple7$ rectangular tabs.
+\paragraph{Hint 2}Let's find the total surface area of the box. Area of a rectangle is equal to its length times its width. Let's find the surface areas of the $\green6$ square sides and $\purple7$ rectangular tabs.
 
 There are $\green{6}$ square sides with side lengths $\blue{9}\text{ in}$:
  
-\begin{align*} SA &= \green{6}\times\blue{9}\times\blue{9}\\
+\begin{align*} A_{\text{sides}} &= \green{6}\times\blue{9}\times\blue{9}\\
 &= 486\text{ in}^2\end{align*}
 
 There are $\purple7$ rectangular tabs $\blue{9}\text{ in}$ by $\pink{2}\text{ in}$:
  
-\begin{align*} SA &= \purple{7}\times\blue{9}\times\pink{2}\\
+\begin{align*} A_{\text{tabs}} &= \purple{7}\times\blue{9}\times\pink{2}\\
 &= 126\text{ in}^2\end{align*}
 
-Let’s sum together all the surface areas to find the total surface area of one box: 
+Let’s sum together all the areas to find the total amount of cardboard required to make one box: 
 
-\begin{align*} SA &= 486 + 126\\
+\begin{align*} A_{\text{box}} 
+&= A_{\text{sides}} +   A_{\text{tabs}} \\[2mm]
+&= 486 + 126\\[2mm]
 &= 612\text{ in}^2\end{align*}
 
-\paragraph{Hint 3}Let's multiply the total area by $\gray{500}$ boxes to find the amount of cardboard:
+\paragraph{Hint 3}The total amount of cardboard required to make $\gray{500}$ boxes is
 
-\begin{align*} SA &= \gray{500}\times612\\&= \red{306000}\text{ in}^2\end{align*}
+\begin{align*} 
+A_{\text{total}} &= \gray{500}\times612\\[2mm]
+&= \red{306000}\text{ in}^2\end{align*}
 
 \paragraph{Hint 4}Sweet as Pie needs a minimum of $\red{306,000}\text{ in}^2$ of cardboard to package all $\gray{500}$ pumpkin pies individually.
 
@@ -189,7 +222,7 @@ Let’s sum together all the surface areas to find the total surface area of one b
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Image needs attribution,  Area, volume, and surface area of 2d and 3d objects, CC.7.G.B.6}\\
-\textbf{Version:} 85286b7a.. 2013-10-14
+\textbf{Version:} af91f822.. 2013-10-18
 \smallskip\hrule
 
 
@@ -199,7 +232,7 @@ Let’s sum together all the surface areas to find the total surface area of one b
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x2303e1e7ce324859}{x2303e1e7ce324859}}
 
 \noindent
-Molly wants to know the volume of her gold ring in cubic centimeters. She gets a rectangular glass with a base $3\text{ cm}$ by $2\text{ cm}$ and fills the glass $3.1 \text{ cm}$ high with water. Molly drops her gold ring in the glass and measures the new height of the water to be $3.7\text{ cm}$. 
+Molly wants to know the volume of her gold ring in cubic centimeters. She gets a glass in the shape of rectangular prism with a base $3\text{ cm}$ by $2\text{ cm}$ and fills the glass with $3.1\text{ cm}$ of water. Molly drops her gold ring in the glass and measures the new height of the water to be $3.7\text{ cm}$. 
 
 **What is the volume of Molly's ring in cubic centimeters?**
 
@@ -215,11 +248,11 @@ Volume $V$ of a rectangular prism can be calculated using the formula:
 
 $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 
-\paragraph{Hint 2}The length $\green3\text{ cm}$ and width $\purple2\text{ cm}$ of the water in the rectangular glass does not change, but the height does change. 
+\paragraph{Hint 2}The length $\green3\text{ cm}$ and width $\purple2\text{ cm}$ of the water in the rectangular glass does not change, only the height of the water changes. 
 
 \paragraph{Hint 3}The change in height of the water is $\blue{(3.7-3.1)}\text{ cm}$. Let's find $V$ of the change in water:
 
-\begin{align*} \text{V} &= \text{length}\cdot\text{width}\cdot\text{height}\\
+\begin{align*} V_{\text{ring}} &= \text{length}\cdot\text{width}\cdot(\text{change in height})\\
 &= \green3\cdot\purple2\cdot\blue{(3.7-3.1)}\\&= \green3\cdot\purple2\cdot\blue{(0.6)}\\
 &= \red{3.6}\text{ cm}^3\end{align*}
 
@@ -230,7 +263,7 @@ $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Image needs attribution,  Area, volume, and surface area of 2d and 3d objects, CC.7.G.B.6}\\
-\textbf{Version:} 3c136df5.. 2013-10-15
+\textbf{Version:} 20d2bf89.. 2013-10-18
 \smallskip\hrule
 
 
@@ -339,41 +372,40 @@ Let’s sum together all the surface areas to find the total surface area of one b
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x27952dc36dd03124}{x27952dc36dd03124}}
 
 \noindent
-A crew is excavating a construction site to build a new swimming pool. The crew fills the box of a dump truck to the top with dirt. The box is $40\text{ ft}$ long, $25\text{ ft}$ wide, and $20\text{ ft}$ high. In transport to the dump site, the volume of the soil decreases $15\%$ as it settles in the box. 
+A crew is excavating a construction site to build a new swimming pool. The crew fills the box of a dump truck to the top with earth. The box is $40\text{ ft}$ long, $25\text{ ft}$ wide, and $20\text{ ft}$ high. In transport to the dump site, the volume of the earth decreases by $15\%$ as it settles in the box. 
 
-**What is the volume of the dirt at the dump site in cubic feet?**
-
-
+**What is the volume of the soil when it reaches the dump site?**
 
 
 \includegraphics[scale=\shrinkfactor]{figures/e5db961622b94a55a7cbe0a2b2c1a6c7_AdPanel.png}
 
 \paragraph{Ans} [[? input-number 1]] $\text{ft}^3$  17000
 
-\paragraph{Hint 1}The length and width of the soil in the box does not change, but the height does change. Only the height of the soil decreases $15\%$. 
+\paragraph{Hint 1}The length and width of the soil in the box of the truck does not change, but the height of the soil changes. The height of the soil decreases by $15\%$ during the transport.
 
-In other words, the soil is $\green{85}\%$ of its original height at the dump site, since $100\%-15\%=\green{85}\%$.
+The soil is $\green{85}\%$ of its original height when it reaches the dump, since $100\%-15\%=\green{85}\%$.
 
 
 
 \paragraph{Hint 2}Let's multiply the original height $\purple{20}\text{ ft}$ by $\green{0.85}$  to find the height of the soil at the dump site:
 
-\begin{align*} h &= \green{0.85}\cdot\purple{20}\\&= \pink{17}\text{ ft}\end{align*}
+\begin{align*} \pink{\text{height}} &= \green{0.85}\cdot\purple{20}\\&= \pink{17}\text{ ft}\end{align*}
 
-\paragraph{Hint 3}Now, let's find the volume of the box using the formula for volume $\text{V}$ of a rectangular prism and the dimensions of the soil at the dump site:
+\paragraph{Hint 3}Now, let's find the volume of the soil using the formula for volume $V$ of a rectangular prism and the dimensions of the soil at the dump site:
 
-\begin{align*} \text{V} &= \text{length}\cdot\text{width}\cdot\text{height}\\
-&= 40\cdot25\cdot\pink{17}\\
-&= \blue{17000}\text{ ft}^3\end{align*}
+\begin{align*} \blue{V} &= \text{length}\cdot\text{width}\cdot\text{height}\\[2mm]
+&= 40\cdot25\cdot\pink{17}\\[2mm]
+&= \blue{17000}\text{ ft}^3
+\end{align*}
 
-\paragraph{Hint 4}The volume of the dirt at the dump site is $\blue{17000}\text{ ft}^3$.
+\paragraph{Hint 4}The volume of soil when it reaches the dump site is $\blue{17,000}\text{ ft}^3$.
 
 
 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Image needs attribution,  Area, volume, and surface area of 2d and 3d objects, CC.7.G.B.6}\\
-\textbf{Version:} d6fed02e.. 2013-10-14
+\textbf{Version:} 5146f38b.. 2013-10-18
 \smallskip\hrule
 
 
@@ -523,7 +555,7 @@ $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x3e93af40b7f72c90}{x3e93af40b7f72c90}}
 
 \noindent
-Molly made each of her $12$ girlfriends a pair of earrings. To wrap the pairs individually, she creates a simple cardboard gift box to fold into a pyramid. The base is a square with side lengths $10\text{ in}$. The sides are $4$ equilateral triangles with side lengths $10\text{ in}$ and height $h$. The height $h$ is equal to $8\dfrac{2}{3}\text{ in}$. 
+Molly made each of her $12$ girlfriends a pair of earrings. To wrap the pairs individually, she creates a simple cardboard gift box to fold into a pyramid. The base is a square with side lengths $10\text{ in}$. The sides are $4$ equilateral triangles with side lengths $10\text{ in}$ and height $h$. The height $h$ is equal to $8\!\frac{2}{3}\text{ in}$. 
 
 **In square inches what is the minimum amount of cardboard Molly needs to create $12$ gift boxes to wrap each pair of earrings individually? (Assume there is no wasted cardboard.)**
 
@@ -543,7 +575,7 @@ Let's use fractions throughout our calculations to avoid any rounding errors.
 \begin{align*} SA &= \blue{10}^2\\
 &= 100\text{ in}^2\end{align*}
 
-Area of a triangle is equal to one half its base times its height $h$. There are $\purple4$ triangles with a base of $\blue{10}\text{ in}$ and height of $\pink{8\dfrac{2}{3}}\text{ in}$:
+Area of a triangle is equal to one half its base times its height $h$. There are $\purple4$ triangles with a base of $\blue{10}\text{ in}$ and height of $\pink{8\frac{2}{3}}\text{ in}$:
  
 \begin{align*} SA &= \purple{4}\times\dfrac{1}{2}\times\blue{10}\times\pink{8\dfrac{2}{3}}\\\\&=\purple{4}\times\blue{10}\times\dfrac{1}{2}\times\pink{\dfrac{26}{3}}\\\\
 &= \dfrac{1040}{6}\\\\&= \dfrac{520}{3}\text{ in}^2\end{align*}
@@ -564,7 +596,7 @@ Let’s sum together all the surface areas to find the total surface area of one b
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Image needs attribution,  Area, volume, and surface area of 2d and 3d objects, CC.7.G.B.6}\\
-\textbf{Version:} 43de7f04.. 2013-10-14
+\textbf{Version:} 4aa17e10.. 2013-10-18
 \smallskip\hrule
 
 
@@ -1349,14 +1381,16 @@ Phung plans to put in square tile flooring in his kitchen. The square tile has a
 \paragraph{Hint 3}Now we can find the total area of the kitchen by adding the areas of the rectangles together. Area of a rectangle is equal to its length times its width. 
 
 \begin{align*}  
-&= 8\times10+4\times12\\\\&=80+48\\\\
-&= \purple{128} \text{ ft}^2\end{align*}
+&= 8\times10+4\times12\\[2mm]
+&=80+48\\[2mm]
+&= \purple{128} \text{ ft}^2
+\end{align*}
 
 The kitchen floor is $\purple{128}$ ft$^2$.
 
 \paragraph{Hint 4}In feet each tile is a square with side length $\dfrac{\blue{8}}{12}$ ft.
 
-The area of one tile is $(\dfrac{\blue{8}}{12})^2=\green{\dfrac{64}{144}}$ ft$^2$. 
+The area of one tile is $\left(\dfrac{\blue{8}}{12}\right)^2=\green{\dfrac{64}{144}}$ ft$^2$. 
 
 Let's divide the area of the kitchen floor by the area of one tile:
 
@@ -1369,7 +1403,7 @@ Let's divide the area of the kitchen floor by the area of one tile:
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize CC.7.G.B.6}\\
-\textbf{Version:} 885cd722.. 2013-10-12
+\textbf{Version:} e7c55566.. 2013-10-18
 \smallskip\hrule
 
 
@@ -1432,7 +1466,7 @@ $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 %    https://ka-perseus-graphie.s3.amazonaws.com/9ee87af5745eecf3946aa60a923f2788c1dea2bf.png \
 %    https://ka-perseus-images.s3.amazonaws.com/6a170f3839757fae9ea33580d7e13567cc0e63e8.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/a118c7f7a06b93f92f4dfa5551cf739f2755885d.png \
-%    http://www.farmersagent.com/Assets/Agents/tbrown8/Images/e5db961622b94a55a7cbe0a2b2c1a6c7_AdPanel.gif \
+%    http://www.farmersagent.com/Assets/Agents/tbrown8/Images/e5db961622b94a55a7cbe0a2b2c1a6c7_AdPanel.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/69a70b16cec3997bfa665a611382451946b7bf54.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/9b1a8c58e358c5d122dd18071886f4cdf8867b8f.png \
 %    https://ka-perseus-images.s3.amazonaws.com/3acac9e0deb063daeeca4749bfd6c9dbd2289ce2.png \
@@ -1452,3 +1486,4 @@ $\text{V} = \text{length}\cdot\text{width}\cdot\text{height}$
 
 
 \end{document}
+
