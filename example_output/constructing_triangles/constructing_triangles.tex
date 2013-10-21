@@ -16,6 +16,9 @@
 
 
 
+
+
+
 \begin{document}
 \maketitle
 
@@ -24,7 +27,7 @@
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x0a2c8d4a7e3a85b9}{x0a2c8d4a7e3a85b9}}
 
 \noindent
-**How many triangles can be drawn where the side length is known between two known angles?**
+**How many triangles can be drawn where we know two angles and the side length between the two angles?**
 
 \paragraph{Ans} 
 
@@ -38,14 +41,14 @@ None
 
 
 
-\paragraph{Hint 1}Let's draw an example of a triangle where the side length is known between $2$ angles. Let's look at when a side of length $4$ is between a pair of $75^\circ$ angles.
+\paragraph{Hint 1}Let's draw an example of a triangle where the side length is known between two angles. Let's look at when a side of length $\blue4$ is between a pair of $\blue{75^\circ}$ angles.
 
-\paragraph{Hint 2}The other two sides can be drawn at $75^\circ$ angles  and are equal in length. The sides meet at a $30^\circ$ angle to complete the triangle. 
+\paragraph{Hint 2}The other two sides can be drawn at $\blue{75^\circ}$ angles  and are equal in length. The sides meet at a $\blue{30^\circ}$ angle to complete the triangle. 
 
 
 \includegraphics[scale=\shrinkfactor]{figures/8664b06c420b8bf33711310103a6963e0f2cc7f1.png}
 
-This triangle is unique, meaning no other triangle exists that satisfies these conditions.
+This triangle is unique, meaning no other triangle exists with the same shape and size.
 
 \paragraph{Hint 3}When the side length is known between two known angles, only one triangle can be drawn.
 
@@ -54,7 +57,7 @@ This triangle is unique, meaning no other triangle exists that satisfies these c
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} e08d4e9d.. 2013-10-20
+\textbf{Version:} 4a925246.. 2013-10-21
 \smallskip\hrule
 
 
@@ -66,6 +69,8 @@ This triangle is unique, meaning no other triangle exists that satisfies these c
 \noindent
 **How many triangles can be drawn with side lengths $9$, $12$ and $15$?**
 
+
+
 \paragraph{Ans} 
 
 None
@@ -78,9 +83,15 @@ None
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
 
-\paragraph{Hint 2}In general, the longest side of a triangle must be shorter than the sum of the two other sides. Because $\blue{9}+\blue{12} =\blue{21}$, the two sides $\blue{9}$ and $\blue{12}$ meet to form $2$ angles with the side of length $\blue{15}$. Thus, we can create a triangle whose sides to satisfy the given conditions.
+\paragraph{Hint 2}In general, any side of a triangle is always shorter than the sum of the other two sides:
+
+\begin{align*}\phantom{over}\blue{15} &<\blue{9}+\blue{12} \\\phantom{over}\blue{12}&<
+ \blue{9}+\blue{15} \\\phantom{over}\blue{9}&<
+ \blue{12}+\blue{15} \\\end{align*}
+
+We can create a triangle with a unique size and shape.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/9e3335e4646b2e59f3ceb8860cd9099de97f22b0.png}
@@ -92,7 +103,7 @@ None
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} d17e39e1.. 2013-10-20
+\textbf{Version:} 49159f6f.. 2013-10-21
 \smallskip\hrule
 
 
@@ -102,9 +113,9 @@ None
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x1afa3df30210708e}{x1afa3df30210708e}}
 
 \noindent
-**Draw a triangle with side lengths $5a$,  $12a$ and $13a$, where $a$ is any positive number.**
+**Draw a right triangle with side lengths $5a$,  $12a$ and $13a$, where $a$ is any positive number.**
 
-**Given these criteria, is the triangle unique?**  
+**Is there a unique triangle that satisfies the given conditions?**  
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -117,9 +128,9 @@ Yes
 
  
 
-\paragraph{Hint 1}Let’s start by choosing a value for $\pink{a}$ where $\pink{a}>0$, then we can draw a triangle with side lengths $\purple5\pink{a}$, $\purple{12}\pink{a}$ and $\purple{13}\pink{a}$.
+\paragraph{Hint 1}Let’s start by choosing a value for $\pink{a}$ where $\pink{a}$ is any positive number, then we can draw a right triangle with side lengths $\purple5\pink{a}$, $\purple{12}\pink{a}$ and $\purple{13}\pink{a}$.
 
-\paragraph{Hint 2}Choosing $\pink{a}=\pink{1}$, we can draw a triangle with side lengths  $\blue{5}$, $\blue{12}$ and $\blue{13}$. This is a right triangle. 
+\paragraph{Hint 2}Choosing $\pink{a}=\pink{1}$, we can draw a right triangle with side lengths  $\blue{5}$, $\blue{12}$ and $\blue{13}$.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/6d298ed14c507f692b6d88792d963d7008b9847a.png}
@@ -129,7 +140,7 @@ Yes
 \includegraphics[scale=\shrinkfactor]{figures/463955e595c31361c49d853aea12289b0f5f7779.png} 
 
 
-\paragraph{Hint 4}The triangle is not unique. We can let $\pink{a}$ be any nonzero positive number and draw many triangles with the same shape but different sizes.
+\paragraph{Hint 4}The triangle is not unique. We can let $\pink{a}$ be any positive number and draw many triangles with the same shape but different sizes.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/28bab6f73b266fa0cb6392a48f06caca532f0cd2.png}
@@ -139,7 +150,7 @@ Yes
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} e7274d62.. 2013-10-20
+\textbf{Version:} f00b6980.. 2013-10-21
 \smallskip\hrule
 
 
@@ -151,7 +162,7 @@ Yes
 \noindent
 **Draw a triangle with side length $4$ between two $70^\circ$ angles.** 
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -166,11 +177,11 @@ Yes
 
 \paragraph{Hint 1}Let’s start by drawing the side whose length  is $\blue{4}$.
 
-\paragraph{Hint 2}From the side $\blue4$, let’s draw $2$ $\blue{70^\circ}$ angles. Since we have $2$ equal angles, we have an isosceles triangle. An isosceles triangle has at least $2$ sides equal in length. 
+\paragraph{Hint 2}From the side $\blue4$, let’s draw two $\blue{70^\circ}$ angles. Since we have two equal angles, we have an isosceles triangle. An isosceles triangle has at least two sides equal in length. 
 
-Since we have $2$ $\blue{70^\circ}$ angles, the third angle must be $\green{40^\circ}$. The sum of $3$ angles in a triangle will always be $\pink{180^\circ}$.
+Since we have two $\blue{70^\circ}$ angles, the third angle must be $\green{40^\circ}$. The sum of three angles in a triangle will always be $\pink{180^\circ}$.
 
-\paragraph{Hint 3}We know the measure of $2$ angles and the length of the side between the angles, so we can draw only $1$ triangle.
+\paragraph{Hint 3}We know the measure of two angles and the length of the side between the angles, so we can draw only one triangle.
 
 \paragraph{Hint 4}The triangle is unique.
 
@@ -182,7 +193,7 @@ Since we have $2$ $\blue{70^\circ}$ angles, the third angle must be $\green{40^\
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} dd847b40.. 2013-10-20
+\textbf{Version:} 7647d185.. 2013-10-21
 \smallskip\hrule
 
 
@@ -213,14 +224,14 @@ Only one
 
 \includegraphics[scale=\shrinkfactor]{figures/fe9bb66c73daee381242a48159a578e8b78ac0fb.png}
 
-\paragraph{Hint 3}If we only know $2$ side lengths, more than one triangle can be drawn.
+\paragraph{Hint 3}If we only know two side lengths, more than one triangle can be drawn.
 
 
 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} cd0bdb35.. 2013-10-20
+\textbf{Version:} d74ae956.. 2013-10-21
 \smallskip\hrule
 
 
@@ -244,18 +255,17 @@ None
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. The $3$ angles always add up to $\pink{180^\circ}$. 
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. The three angles always add up to $\pink{180^\circ}$. 
 
-We have two $\blue{45^\circ}$ angles. The third angle $x$ is $\blue{90^\circ}$: 
+Since we have two $\blue{45^\circ}$ angles, the third angle is $\blue{90^\circ}$: 
 
-\begin{align*} 
-\pink{180^\circ}&= \blue{45^\circ}+\blue{45^\circ} + x \\ \pink{180^\circ}&= \blue{90^\circ} + x \\
-x &= \pink{180^\circ}-\blue{90^\circ} \\
-x &= \blue{90^\circ} \end{align*}
+\begin{align*}\
+ &= \pink{180^\circ}-2\cdot\blue{45^\circ} \\
+ &= \blue{90^\circ} \end{align*}
 
-The third angle $x$ is $\blue{90^\circ}$ so let's draw a right triangle. 
+Let's draw a right triangle. 
 
-\paragraph{Hint 2}We can draw a right triangle and make two of its sides of length $\blue{2}$. The sides with length $\blue{2}$ are in between the $\blue{45^\circ}$ and $\blue{90^\circ}$ angles.
+\paragraph{Hint 2}We can draw a right triangle and make two of its sides of length $\blue{2}$. The sides with length $\blue{2}$ must be between the $\blue{45^\circ}$ and $\blue{90^\circ}$ angles.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/50ab52075216ec1ebe030aa80de8615558c71846.png}
@@ -269,7 +279,7 @@ This triangle is unique, meaning no other triangle exists with exactly the same 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 5c0563e0.. 2013-10-20
+\textbf{Version:} 2c26d431.. 2013-10-21
 \smallskip\hrule
 
 
@@ -279,9 +289,9 @@ This triangle is unique, meaning no other triangle exists with exactly the same 
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x2bce84b97313fd2b}{x2bce84b97313fd2b}}
 
 \noindent
-**Draw a triangle where the side length $3$ is not between two angles $31^\circ$ and $90^\circ$.**
+**Draw a triangle with two angles $31^\circ$ and $90^\circ$ where side length $3$ is *not* between the two angles $31^\circ$ and $90^\circ$.**
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -298,11 +308,11 @@ This triangle is unique, meaning no other triangle exists with exactly the same 
 
 Then, let's draw the side of length $\blue3$ next to the right angle, so our base is length $\blue3$.
 
-\paragraph{Hint 2}The length of $\blue3$ is $\red{\text{not}}$ between $2$ angles $\blue{31^\circ}$ and $\blue{90^\circ}$. 
+\paragraph{Hint 2}The length of $\blue3$ is $\red{\text{not}}$ between two angles $\blue{31^\circ}$ and $\blue{90^\circ}$. 
 
 Since we drew the side of length $\blue3$ next to the right angle, the $\blue{31^\circ}$ angle must be *opposite* the side of length $\blue3$ .
 
-\paragraph{Hint 3}We know the measure of $2$ angles and the length of $1$ side not between the angles, so we can draw only $1$ triangle.
+\paragraph{Hint 3}We know the measure of two angles and the length of one side not between the angles, so we can draw only one triangle.
 
 \paragraph{Hint 4}The triangle is unique.
 
@@ -314,7 +324,7 @@ Since we drew the side of length $\blue3$ next to the right angle, the $\blue{31
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 1215aaf1.. 2013-10-17
+\textbf{Version:} 4c8a5b03.. 2013-10-21
 \smallskip\hrule
 
 
@@ -338,9 +348,14 @@ None
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
 
-\paragraph{Hint 2}In general, the longest side of a triangle must be shorter than the sum of the two other sides. Because $\blue{4}+\blue{4} =\blue{8}$, the two sides $\blue{4}$ and $\blue{4}$ meet to form $2$ angles with the side of length $\blue{7}$. We can create $3$ angles with the $3$ sides to satisfy the definition of a triangle.
+\paragraph{Hint 2}In general, any side of a triangle is always shorter than the sum of the other two sides:
+
+\begin{align*}\phantom{over}\blue{7} &<\blue{4}+\blue{4} \\\phantom{over}\blue{4}&<
+ \blue{7}+\blue{4}  \\\end{align*}
+
+We can create a triangle with a unique size and shape.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/a5961a517a4e6e5e6def530e3948dc049dbfad9a.png}
@@ -352,7 +367,7 @@ None
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 33683619.. 2013-10-20
+\textbf{Version:} 7bc13eed.. 2013-10-21
 \smallskip\hrule
 
 
@@ -362,7 +377,7 @@ None
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x38cc51ab93842600}{x38cc51ab93842600}}
 
 \noindent
-**How many triangles can be drawn with side lengths $1$, $1$ and $2$?**
+**How many triangles can be drawn with side lengths $1$, $1$ and $2.5$?**
 
 \paragraph{Ans} 
 
@@ -376,11 +391,14 @@ More than one
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
 
-\paragraph{Hint 2}In general, the longest side of a triangle must be shorter than the sum of the two other sides. Because $\blue{1}+\blue{1} =\blue{2}$, the two side lengths $\blue{1}$ and $\blue{1}$ cannot meet to form a third angle. We cannot create $3$ angles to satisfy the definition of a triangle.
+\paragraph{Hint 2}In general, any side of a triangle is always shorter than the sum of the other two sides. Because $\blue{2.5} >\blue{1}+\blue{1}$, the two sides $\blue{1}$ and $\blue{1}$ cannot meet to form a third angle over the third side $\blue{2.5}$. 
 
-\includegraphics[scale=\shrinkfactor]{figures/0fc8a765d9e1e79a7c3e4874b8f9448d3b5c1d18.png}
+
+\includegraphics[scale=\shrinkfactor]{figures/cb4884edd39739116b62d131aa206b66f99db2cb.png}
+
+We cannot create three angles to satisfy the definition of a triangle.
 
 \paragraph{Hint 3}Given the conditions, no triangles can be drawn.
 
@@ -389,7 +407,7 @@ More than one
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} aeb719e4.. 2013-10-18
+\textbf{Version:} 05f2acc5.. 2013-10-21
 \smallskip\hrule
 
 
@@ -399,9 +417,9 @@ More than one
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x4c335bfbee0cba92}{x4c335bfbee0cba92}}
 
 \noindent
-**Draw a right triangle with at least $2$ sides of equal length.** 
+**Draw a right triangle with at least two sides of equal length.** 
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -416,9 +434,9 @@ Yes
 
 \paragraph{Hint 1}Let’s start by drawing. A right triangle has one $\blue{90 ^\circ}$ angle. 
 
-A triangle with at least $2$ equal side lengths is called an isosceles triangle. We do not know the side lengths.
+A triangle with at least two equal side lengths is called an isosceles triangle. We do not know the side lengths.
 
-\paragraph{Hint 2}We can draw many right triangles with $2$ sides of  equal length.  
+\paragraph{Hint 2}We can draw many right triangles with two sides of  equal length.  
 
 \includegraphics[scale=\shrinkfactor]{figures/d8b2dd5b2d43266692ba3d2c35cf5638f2f3c05c.png}
 
@@ -429,7 +447,7 @@ A triangle with at least $2$ equal side lengths is called an isosceles triangle.
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 5f71c91d.. 2013-10-20
+\textbf{Version:} 381a8a90.. 2013-10-21
 \smallskip\hrule
 
 
@@ -439,7 +457,7 @@ A triangle with at least $2$ equal side lengths is called an isosceles triangle.
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x531e157ba7c498eb}{x531e157ba7c498eb}}
 
 \noindent
-**How many triangles can be drawn where the measures of all $3$ angles are the same?**
+**How many triangles can be drawn where the measures of all three angles are the same?**
 
 \paragraph{Ans} 
 
@@ -453,11 +471,11 @@ Only one
 
  
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. What triangle or triangles would satisfy the conditions? 
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. What triangle or triangles would satisfy the conditions? 
 
-Let's try to draw a triangle where the measures of all $3$ angles is the same. 
+Let's try to draw a triangle where the measures of all three angles is the same. 
 
-\paragraph{Hint 2}The $3$ angle measures in a triangle must sum to $180^\circ$. Because we know the measure of all $3$ angles must be the same, we know all $3$ angles have measure $\dfrac{180^\circ}{3}=\blue{60^\circ}$. 
+\paragraph{Hint 2}The three angle measures in a triangle must sum to $\pink{180^\circ}$. Because we know the measure of all three angles must be the same, we know all three angles have measure $\dfrac{\pink{180^\circ}}{3}=\blue{60^\circ}$. 
 
 
 \includegraphics[scale=\shrinkfactor]{figures/9bbd0fa30a5ae16d50c816c4a8c4cfc44a68146c.png}
@@ -472,14 +490,14 @@ We can draw many equilateral triangles with the same shape but different sizes.
 
 \includegraphics[scale=\shrinkfactor]{figures/3e0462daa95058cdd7264a43f9c163723c418fd6.png}
 
-\paragraph{Hint 4}More than one triangle can be drawn with all $3$ angles measures equal.
+\paragraph{Hint 4}More than one triangle can be drawn with all three angles measures equal.
 
 
 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 47228a28.. 2013-10-20
+\textbf{Version:} 1ab79063.. 2013-10-21
 \smallskip\hrule
 
 
@@ -491,7 +509,7 @@ We can draw many equilateral triangles with the same shape but different sizes.
 \noindent
 **Draw a right triangle that is also an isosceles triangle and has two sides of length $3$.** 
 
-**Given these criteria is the triangle unique?**   
+**Is there a unique triangle that satisfies the given conditions?**   
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -506,11 +524,11 @@ We can draw many equilateral triangles with the same shape but different sizes.
 
 \paragraph{Hint 1}Let’s start by drawing. A right triangle has one $\blue{90^\circ}$ angle. 
 
-An isosceles triangle has at least $2$ side lengths equal. We are given $2$ side lengths both equal to $\blue3$. 
+An isosceles triangle has at least two side lengths equal. We are given two side lengths both equal to $\blue3$. 
 
-\paragraph{Hint 2}Let's draw $1$ side length $\blue{3}$ as the height vertically (up and down) from the $\blue{90 ^\circ}$ angle. Let's draw the other side length $\blue{3}$ as the base horizontally (left and right) from the $\blue{90^\circ}$ angle. 
+\paragraph{Hint 2}Let's draw one side length $\blue{3}$ as the height vertically (up and down) from the $\blue{90 ^\circ}$ angle. Let's draw the other side length $\blue{3}$ as the base horizontally (left and right) from the $\blue{90^\circ}$ angle. 
 
-\paragraph{Hint 3}Since we are given the measures of $2$ sides and the angle between them, we can draw only $1$ triangle.
+\paragraph{Hint 3}Since we are given the measures of two sides and the angle between them, we can draw only one triangle.
 
 \paragraph{Hint 4}The triangle is unique.
 
@@ -521,7 +539,7 @@ An isosceles triangle has at least $2$ side lengths equal. We are given $2$ side
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} b8c14c25.. 2013-10-20
+\textbf{Version:} 42221dd1.. 2013-10-21
 \smallskip\hrule
 
 
@@ -533,7 +551,7 @@ An isosceles triangle has at least $2$ side lengths equal. We are given $2$ side
 \noindent
 **Draw a right triangle with two $45^\circ$ angles.**
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -550,7 +568,7 @@ Yes
 
 The triangle we want is an isosceles right triangle. An isosceles right triangle has two $\blue{45^\circ}$ angles.
 
-\paragraph{Hint 2}We know the measure of all $3$ angles but not the length of any side. Therefore, we can draw many triangles of various sizes all with a pair of $\blue{45^\circ}$ angles.
+\paragraph{Hint 2}We know the measure of all three angles but not the length of any side. Therefore, we can draw many triangles of various sizes all with a pair of $\blue{45^\circ}$ angles.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/91996cb5320f958d2fa0f8249c77e9d88bbb2764.png}
@@ -564,7 +582,7 @@ The triangle we want is an isosceles right triangle. An isosceles right triangle
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 525a66e3.. 2013-10-20
+\textbf{Version:} fb842816.. 2013-10-21
 \smallskip\hrule
 
 
@@ -574,7 +592,7 @@ The triangle we want is an isosceles right triangle. An isosceles right triangle
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x6763ceb1ec0ceb41}{x6763ceb1ec0ceb41}}
 
 \noindent
-**How many triangles can be drawn where the lengths of all $3$ sides are equal to $1$?**
+**How many triangles can be drawn where the lengths of all three sides are equal to $1$?**
 
 \paragraph{Ans} 
 
@@ -588,23 +606,23 @@ None
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. Is there a triangle or triangles that satisfy the conditions? Let's try to draw a triangle with all side lengths equal to $1$.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. Is there a triangle or triangles that satisfy the conditions? Let's try to draw a triangle with all side lengths equal to $\blue1$.
 
 \paragraph{Hint 2}The result is an equilateral triangle with equal side lengths and equal angles measures:
 
 
 \includegraphics[scale=\shrinkfactor]{figures/b0e7ebe35f997eac2f27bbad47f0033422d118b3.png}
 
-This triangle is unique, meaning no other triangle exists that has all sides equal to $1$.
+This triangle is unique, meaning no other triangle exists that has all sides equal to $\blue1$.
 
-\paragraph{Hint 3}In general, if the lengths of all $3$ sides are known, only one triangle can be drawn.
+\paragraph{Hint 3}In general, if the lengths of all three sides are known, only one triangle can be drawn.
 
 
 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} ca634aaf.. 2013-10-20
+\textbf{Version:} e412934c.. 2013-10-21
 \smallskip\hrule
 
 
@@ -614,7 +632,7 @@ This triangle is unique, meaning no other triangle exists that has all sides equ
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x67ee6010588311f2}{x67ee6010588311f2}}
 
 \noindent
-**How many triangles can be drawn with side lengths $4$, $6$ and $10$?**
+**How many triangles can be drawn with side lengths $4$, $6$ and $11$?**
 
 \paragraph{Ans} 
 
@@ -628,12 +646,14 @@ More than one
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
 
-\paragraph{Hint 2}In general, the longest side of a triangle must be shorter than the sum of the two other sides. Because $\blue{4}+\blue{6} =\blue{10}$, the two sides $\blue{4}$ and $\blue{6}$ cannot meet to form a third angle. We cannot create $3$ angles to satisfy the definition of a triangle.
+\paragraph{Hint 2}In general, any side of a triangle is always shorter than the sum of the other two sides. Because $\blue{11} >\blue{6}+\blue{4}$, the two sides $\blue{6}$ and $\blue{4}$ cannot meet to form a third angle over the third side $\blue{11}$. 
 
 
-\includegraphics[scale=\shrinkfactor]{figures/acf337830bf93b0d2118eb2712a2d821a3ddd4c1.png}
+\includegraphics[scale=\shrinkfactor]{figures/6b60caa69910861ed0aa6e21b79d5cde304168b3.png}
+
+We cannot create three angles to satisfy the definition of a triangle.
 
 \paragraph{Hint 3}Given the conditions, no triangles can be drawn.
 
@@ -642,7 +662,7 @@ More than one
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 9421cd19.. 2013-10-18
+\textbf{Version:} edcac7f5.. 2013-10-21
 \smallskip\hrule
 
 
@@ -652,9 +672,9 @@ More than one
 \section{\href{https://www.khanacademy.org/devadmin/content/items/x67fd10caf4f54df2}{x67fd10caf4f54df2}}
 
 \noindent
-**Draw a triangle with side lengths $3a$,  $4a$ and $5a$, where $a$ is any positive number.**
+**Draw a right triangle with side lengths $3a$,  $4a$ and $5a$, where $a$ is any positive number.**
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -667,9 +687,9 @@ Yes
 
  
 
-\paragraph{Hint 1}Let’s start by choosing a value for $\pink{a}$ where $\pink{a}>0$, then we can draw a triangle with side lengths $\purple3\pink{a}$, $\purple4\pink{a}$ and $\purple5\pink{a}$.
+\paragraph{Hint 1}Let’s start by choosing a value for $\pink{a}$ where $\pink{a}$ is any positive number, then we can draw a right triangle with side lengths $\purple3\pink{a}$, $\purple4\pink{a}$ and $\purple5\pink{a}$.
 
-\paragraph{Hint 2}If $\pink{a}=1$, then we can draw a triangle with side lengths $\blue3$, $\blue4$ and $\blue5$. This is a right triangle.
+\paragraph{Hint 2}If $\pink{a}=1$, then we can draw a right triangle with side lengths $\blue3$, $\blue4$ and $\blue5$. 
 
 \includegraphics[scale=\shrinkfactor]{figures/b1eff2246ff6077c50f40ea6bfe55bad4b8ced80.png}
 
@@ -689,7 +709,7 @@ We can let $\pink{a}$ be any positive number and draw many triangles of same sha
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 95e0a049.. 2013-10-20
+\textbf{Version:} 0b713fdb.. 2013-10-21
 \smallskip\hrule
 
 
@@ -701,7 +721,7 @@ We can let $\pink{a}$ be any positive number and draw many triangles of same sha
 \noindent
 **Draw a right triangle with a height $4$ and base  $5$.** 
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -718,7 +738,7 @@ We can let $\pink{a}$ be any positive number and draw many triangles of same sha
 
 The height of length $\blue{4}$ is drawn vertically (up and down) from the $\blue{90^\circ}$ angle. The base of length $\blue{5}$ is drawn horizontally (left and right) from the $\blue{90^\circ}$ angle. 
 
-\paragraph{Hint 2}Since we are given the measures of $2$ sides and the angle between them, we can draw only $1$ triangle.
+\paragraph{Hint 2}Since we are given the measures of two sides and the angle between them, we can draw only one triangle.
 
 \paragraph{Hint 3}The triangle is unique.
 
@@ -730,7 +750,7 @@ The height of length $\blue{4}$ is drawn vertically (up and down) from the $\blu
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 41522448.. 2013-10-20
+\textbf{Version:} 77539544.. 2013-10-21
 \smallskip\hrule
 
 
@@ -759,16 +779,16 @@ Only one
 
 \includegraphics[scale=\shrinkfactor]{figures/2d99bebb2da26f68f4d74679d523ed8d96db3e5c.png}
 
-\paragraph{Hint 2}Without knowing at least $1$ angle measure, we cannot create a unique triangle with side lengths $3$ and $4$.
+\paragraph{Hint 2}Without knowing at least one angle measure, we cannot create a unique triangle with side lengths $\blue3$ and $\blue4$.
 
-\paragraph{Hint 3}If we only know $2$ side lengths, more than one triangle can be drawn.
+\paragraph{Hint 3}If we only know two side lengths, more than one triangle can be drawn.
 
 
 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} af92749c.. 2013-10-20
+\textbf{Version:} 7f5a7177.. 2013-10-21
 \smallskip\hrule
 
 
@@ -792,7 +812,7 @@ More than one
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. In a triangle, the sum of the three angle measures is $\pink{180^\circ}$.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. In a triangle, the sum of the three angle measures is $\pink{180^\circ}$.
 
 \paragraph{Hint 2}Let's add together the angles measures $\blue{60}^\circ$,  $\blue{60}^\circ$ and $\blue{70}^\circ$:
 
@@ -801,10 +821,9 @@ More than one
 &= \blue{60^\circ} + \blue{60^\circ}+\blue{70^\circ}\\
 &= 120^\circ+70^\circ\\
 &= 190^\circ\\
-&>\pink{180^\circ}
 \end{align*}
 
-The sum of the $3$ angle measures is greater than $\pink{180^\circ}$.
+The sum of the three angle measures is greater than $\pink{180^\circ}$.
 
 \paragraph{Hint 3}No triangle can be drawn that satisfies the given conditions.
 
@@ -813,19 +832,19 @@ The sum of the $3$ angle measures is greater than $\pink{180^\circ}$.
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 88ce2f2f.. 2013-10-20
+\textbf{Version:} b659944d.. 2013-10-21
 \smallskip\hrule
 
 
 
 
 
-\section{\href{https://www.khanacademy.org/devadmin/content/items/xb9aa47b3de982d55}{xb9aa47b3de982d55}}
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xb880da8414b8f195}{xb880da8414b8f195}}
 
 \noindent
-**Draw an isosceles triangle with two $70^\circ$ angles.**
+**Draw an obtuse triangle with angles $45^\circ$,  $35^\circ$ and $100^\circ$.**
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -838,7 +857,48 @@ Yes
 
  
 
-\paragraph{Hint 1}Let’s start by drawing an isosceles triangle with $2$ $\blue{70^\circ}$ angles. An isosceles triangle has at least $2$ side lengths equal and $2$ angles equal.
+\paragraph{Hint 1}Let’s start by drawing. While keeping one angle constant, we can change the side lengths to create one of the other two angles.
+
+For example, while keeping a $\blue{45^\circ}$ angle, we can change the side lengths to create the $\blue{35^\circ}$ angle. The third angle will have measure $\blue{100^\circ}$.
+
+\paragraph{Hint 2}We know the measure of three angles but not the length of any side. We can draw many triangles of same shape but different sizes.
+
+\paragraph{Hint 3}The triangle is not unique.
+
+
+\includegraphics[scale=\shrinkfactor]{figures/c6b48cf353062cc42130d16552b68f58a6daf58e.png}
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
+\textbf{Version:} 6879cae0.. 2013-10-21
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xb9aa47b3de982d55}{xb9aa47b3de982d55}}
+
+\noindent
+**Draw an isosceles triangle with two $70^\circ$ angles.**
+
+**Is there a unique triangle that satisfies the given conditions?**
+[[? interactive-graph 1]]
+
+\paragraph{Ans} 
+
+Yes
+
+\fbox{ No
+
+}
+
+ 
+
+\paragraph{Hint 1}Let’s start by drawing an isosceles triangle with two $\blue{70^\circ}$ angles. An isosceles triangle has at least two side lengths equal and two angles equal.
 
 \paragraph{Hint 2}We do not know the side lengths, so we can draw many triangles.
 
@@ -851,7 +911,7 @@ Yes
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 3bc9edc0.. 2013-10-18
+\textbf{Version:} c30a9e63.. 2013-10-21
 \smallskip\hrule
 
 
@@ -875,7 +935,7 @@ More than one
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. In a triangle, the sum of the three angle measures is $\pink{180^\circ}$.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. In a triangle, the sum of the three angle measures is $\pink{180^\circ}$.
 
 A right triangle has a $\blue{90}^\circ$  angle.
 
@@ -884,9 +944,9 @@ A right triangle has a $\blue{90}^\circ$  angle.
 \begin{align*}
 \text{sum of angle measures} 
  &=  \blue{40^\circ}+\blue{60^\circ}+\blue{90^\circ}\\
-&= 190^\circ\\&>\pink{180^\circ}\end{align*}
+&= 190^\circ\end{align*}
 
-The sum of the $3$ angles is greater than $\pink{180^\circ}$.
+The sum of the three angles is greater than $\pink{180^\circ}$.
 
 \paragraph{Hint 3}No triangle can be drawn that satisfies the given conditions.
 
@@ -895,7 +955,7 @@ The sum of the $3$ angles is greater than $\pink{180^\circ}$.
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 69a54880.. 2013-10-20
+\textbf{Version:} 24dc4864.. 2013-10-21
 \smallskip\hrule
 
 
@@ -905,9 +965,9 @@ The sum of the $3$ angles is greater than $\pink{180^\circ}$.
 \section{\href{https://www.khanacademy.org/devadmin/content/items/xc001c788d01d9e5f}{xc001c788d01d9e5f}}
 
 \noindent
-**Draw a triangle where side length $4$ is not between two angles $58^\circ$ and $90^\circ$.**
+**Draw a triangle with two angles $58^\circ$ and $90^\circ$ where side length $4$ is *not* between the two angles $58^\circ$ and $90^\circ$.**
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -924,11 +984,11 @@ The sum of the $3$ angles is greater than $\pink{180^\circ}$.
 
 Then, let's draw the side of length $\blue4$ next to the right angle, so our base has a length of $\blue4$.
 
-\paragraph{Hint 2}The side of length $\blue4$ is $\red{\text{not}}$ between $2$ angles $\blue{58^\circ}$ and $\blue{90^\circ}$. 
+\paragraph{Hint 2}The side of length $\blue4$ is $\red{\text{not}}$ between two angles $\blue{58^\circ}$ and $\blue{90^\circ}$. 
 
 Since we drew the side of length $\blue4$ next to the right angle, the $\blue{58^\circ}$ angle must be *opposite* the side of length $\blue4$ .
 
-\paragraph{Hint 3}We know the measure of $2$ angles and the length of $1$ side not between the angles, so we can draw only $1$ triangle.
+\paragraph{Hint 3}We know the measure of two angles and the length of one side not between the angles, so we can draw only one triangle.
 
 \paragraph{Hint 4}The triangle is unique.
 
@@ -940,7 +1000,7 @@ Since we drew the side of length $\blue4$ next to the right angle, the $\blue{58
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 9534c031.. 2013-10-17
+\textbf{Version:} c15babbe.. 2013-10-21
 \smallskip\hrule
 
 
@@ -952,7 +1012,7 @@ Since we drew the side of length $\blue4$ next to the right angle, the $\blue{58
 \noindent
 **Draw a triangle with side length $5$ between two $58^\circ$ angles.** 
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -965,13 +1025,13 @@ Since we drew the side of length $\blue4$ next to the right angle, the $\blue{58
 
 
 
-\paragraph{Hint 1}Let’s start by drawing the length of $1$ side, which we know is $\blue5$.  
+\paragraph{Hint 1}Let’s start by drawing the length of one side, which we know is $\blue5$.  
 
-\paragraph{Hint 2}From the side $\blue5$, let’s draw $2$ $\blue{58^\circ}$ angles. Since we have $2$ equal angles, we have an isosceles triangle. An isosceles triangle has at least $2$ sides equal in length. 
+\paragraph{Hint 2}From the side $\blue5$, let’s draw two $\blue{58^\circ}$ angles. Since we have two equal angles, we have an isosceles triangle. An isosceles triangle has at least two sides equal in length. 
 
-Since we have $2$ $\blue{58^\circ}$ angles, the third angle must be $\green{64^\circ}$. The sum of $3$ angles in a triangle will always be $\pink{180^\circ}$.
+Since we have two $\blue{58^\circ}$ angles, the third angle must be $\green{64^\circ}$. The sum of  three angles in a triangle will always be $\pink{180^\circ}$.
 
-\paragraph{Hint 3}We know the measure of $2$ angles and the length of the side between the angles, so we can draw only $1$ triangle.
+\paragraph{Hint 3}We know the measure of two angles and the length of the side between the angles, so we can draw only one triangle.
 
 \paragraph{Hint 4}The triangle is unique.
 
@@ -983,7 +1043,7 @@ Since we have $2$ $\blue{58^\circ}$ angles, the third angle must be $\green{64^\
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 5ba2ed08.. 2013-10-17
+\textbf{Version:} 7d6f4977.. 2013-10-21
 \smallskip\hrule
 
 
@@ -993,9 +1053,9 @@ Since we have $2$ $\blue{58^\circ}$ angles, the third angle must be $\green{64^\
 \section{\href{https://www.khanacademy.org/devadmin/content/items/xc40b1278855716df}{xc40b1278855716df}}
 
 \noindent
-**Draw a triangle with side lengths $3$, $4$ and $5$.** 
+**Draw a right triangle with side lengths $3$, $4$ and $5$.** 
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -1008,9 +1068,9 @@ Since we have $2$ $\blue{58^\circ}$ angles, the third angle must be $\green{64^\
 
 
 
-\paragraph{Hint 1}Let’s start by drawing. We know the lengths of all $3$ sides. How many triangles can we draw?
+\paragraph{Hint 1}Let’s start by drawing. We know the lengths of all three sides. How many triangles can we draw?
 
-\paragraph{Hint 2}The triangle with side lengths $\blue3$, $\blue4$ and $\blue5$ is a right triangle. Since we are given the measures of $3$ sides, we can draw only $1$ triangle. 
+\paragraph{Hint 2}The triangle with side lengths $\blue3$, $\blue4$ and $\blue5$ is a right triangle. Since we are given the measures of three sides, we can draw only one triangle. 
 
 \paragraph{Hint 3}The triangle is unique.
 
@@ -1022,48 +1082,7 @@ Since we have $2$ $\blue{58^\circ}$ angles, the third angle must be $\green{64^\
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} b5262e6e.. 2013-10-17
-\smallskip\hrule
-
-
-
-
-
-\section{\href{https://www.khanacademy.org/devadmin/content/items/xcfae18d2af4efa34}{xcfae18d2af4efa34}}
-
-\noindent
-**Draw an obtuse triangle with angles $45^\circ$,  $35^\circ$ and $100^\circ$.**
-
-**Given these criteria is the triangle unique?**
-[[? interactive-graph 1]]
-
-\paragraph{Ans} 
-
-Yes
-
-\fbox{ No
-
-}
-
- 
-
-\paragraph{Hint 1}Let’s start by drawing. While keeping one angle constant, we can change the side lengths to create one of the other two angles.
-
-For example, while keeping a $\blue{45^\circ}$ angle, we can change the side lengths to create the $\blue{35^\circ}$ angle. The third angle will have measure $\blue{100^\circ}$.
-
-\paragraph{Hint 2}We know the measure of $3$ angles but not the length of any side. We can therefore draw many triangles of the same shape but with different sizes.
-
-
-\includegraphics[scale=\shrinkfactor]{figures/c6b48cf353062cc42130d16552b68f58a6daf58e.png}
-
-\paragraph{Hint 3}The triangle is not unique.
-
-
-
-\medskip
-\noindent
-\textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 71b1e27f.. 2013-10-20
+\textbf{Version:} 3adc68e6.. 2013-10-21
 \smallskip\hrule
 
 
@@ -1073,7 +1092,7 @@ For example, while keeping a $\blue{45^\circ}$ angle, we can change the side len
 \section{\href{https://www.khanacademy.org/devadmin/content/items/xdba9a2b900c8bbcd}{xdba9a2b900c8bbcd}}
 
 \noindent
-**How many triangles can be drawn with side lengths $1$, $2$ and $3$?**
+**How many triangles can be drawn with side lengths $1$, $2$ and $4$?**
 
 \paragraph{Ans} 
 
@@ -1087,12 +1106,14 @@ More than one
 
 
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. Can we satisfy the definition given the conditions? Let's try to draw a triangle given the conditions.
 
-\paragraph{Hint 2}In general, the longest side of a triangle must be shorter than the sum of the two other sides. Because $\blue{1}+\blue{2} =\blue{3}$, the two sides $\blue{1}$ and $\blue{2}$ cannot meet to form a third angle. We cannot create $3$ angles to satisfy the definition of a triangle.
+\paragraph{Hint 2}In general, any side of a triangle is always shorter than the sum of the other two sides. Because $\blue{4} >\blue{2}+\blue{1}$, the two sides $\blue{2}$ and $\blue{1}$ cannot meet to form a third angle over the third side $\blue{4}$. 
 
 
-\includegraphics[scale=\shrinkfactor]{figures/8138125d70973033dceda459b359bd456038254f.png}
+\includegraphics[scale=\shrinkfactor]{figures/dbd401421f460f804da516fa3a58107492fea141.png}
+
+We cannot create three angles to satisfy the definition of a triangle.
 
 \paragraph{Hint 3}Given the conditions, no triangles can be drawn.
 
@@ -1101,7 +1122,7 @@ More than one
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 2feadc91.. 2013-10-18
+\textbf{Version:} 950a8286.. 2013-10-21
 \smallskip\hrule
 
 
@@ -1125,30 +1146,30 @@ Only one
 
  
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. The $3$ angles measures must add up to $\pink{180^\circ}$. Let's add together the angles $\blue{30}^\circ$,  $\blue{50}^\circ$ and $\blue{100}^\circ$:
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. The three angles measures must add up to $\pink{180^\circ}$. Let's add together the angles $\blue{30}^\circ$,  $\blue{50}^\circ$ and $\blue{100}^\circ$:
 
 \begin{align*} 
 \text{total angle measure} &= \blue{30^\circ}+\blue{50^\circ}+\blue{180^\circ}\\
 &=\pink{180^\circ}
 \end{align*}
 
-So, at least $1$ triangle exists. Let's draw it.
+So, at least one triangle exists. Let's draw.
 
-\paragraph{Hint 2}We know the measure of $3$ angles but not the length of any side. We can draw many triangles with the same shape but different sizes.
+\paragraph{Hint 2}We know the measure of three angles but not the length of any side. We can draw many triangles with the same shape but different sizes.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/cfa8c2afddab68081b192038f3130d47880b443e.png}
 
 \includegraphics[scale=\shrinkfactor]{figures/b1683148f0f59becb3f7ee5221cd130e632609d7.png}
 
-\paragraph{Hint 3}When only the measures of all $3$ angles are known, more than one triangle can be drawn.
+\paragraph{Hint 3}When only the measures of all three angles are known, more than one triangle can be drawn.
 
 
 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 089fe1ab.. 2013-10-20
+\textbf{Version:} 7c205db7.. 2013-10-21
 \smallskip\hrule
 
 
@@ -1172,23 +1193,23 @@ Only one
 
  
 
-\paragraph{Hint 1}A triangle is a plane figure with $3$ straight sides and $3$ angles. 
+\paragraph{Hint 1}A triangle is a plane figure with three straight sides and three angles. 
 
-The $3$ angles measures always add up to $\pink{180^\circ}$. We only know $1$ angle is $\blue{45^\circ}$. We can't find the measures of the other $2$ angles.
+The three angles measures always add up to $\pink{180^\circ}$. We only know one angle is $\blue{45^\circ}$. We can't find the measures of the other two angles.
 
-\paragraph{Hint 2}We know the length of only $1$ side is $\blue5$. Depending if we place the side of length $\blue5$ next to or across from the $\blue{45^\circ}$ angle, we can  draw many triangles with different shapes and different sizes.
+\paragraph{Hint 2}We know the length of only one side is $\blue5$. Depending if we place the side of length $\blue5$ next to or across from the $\blue{45^\circ}$ angle, we can  draw many triangles with different shapes and different sizes.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/8fd2ab6db3cbbe9cbdf43af4cf872835fa89ecf2.png}
 
-\paragraph{Hint 3}If we only know $1$ angle and $1$ side length, more than one triangle can be drawn.
+\paragraph{Hint 3}If we only know one angle and one side length, more than one triangle can be drawn.
 
 
 
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} ba0688a0.. 2013-10-20
+\textbf{Version:} e1956610.. 2013-10-21
 \smallskip\hrule
 
 
@@ -1200,7 +1221,7 @@ The $3$ angles measures always add up to $\pink{180^\circ}$. We only know $1$ an
 \noindent
 **Draw a triangle with angles $30^\circ$,  $50^\circ$ and $100^\circ$.**
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -1213,11 +1234,11 @@ Yes
 
  
 
-\paragraph{Hint 1}Let’s start by drawing. While keeping $1$ angle, we can change the side lengths to create $1$ of the other $2$ angles.
+\paragraph{Hint 1}Let’s start by drawing. While keeping one angle, we can change the side lengths to create one of the other two angles.
 
 While keeping a $\blue{100^\circ}$ angle, we can change the side lengths to create the $\blue{50^\circ}$ angle. The final angle will be $\blue{30^\circ}$.
 
-\paragraph{Hint 2}We know the measure of $3$ angles but not the length of any side. We can draw many triangles of same shape but different sizes.
+\paragraph{Hint 2}We know the measure of three angles but not the length of any side. We can draw many triangles of same shape but different sizes.
 
 \paragraph{Hint 3}The triangle is not unique.
 
@@ -1228,7 +1249,7 @@ While keeping a $\blue{100^\circ}$ angle, we can change the side lengths to crea
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} ac2e7f53.. 2013-10-18
+\textbf{Version:} d7e4aa43.. 2013-10-21
 \smallskip\hrule
 
 
@@ -1238,9 +1259,9 @@ While keeping a $\blue{100^\circ}$ angle, we can change the side lengths to crea
 \section{\href{https://www.khanacademy.org/devadmin/content/items/xf9872931929ac56c}{xf9872931929ac56c}}
 
 \noindent
-**Draw a triangle with side lengths $5$, $12$ and $13$.** 
+**Draw a right triangle with side lengths $5$, $12$ and $13$.** 
 
-**Given these criteria is the triangle unique?**
+**Is there a unique triangle that satisfies the given conditions?**
 [[? interactive-graph 1]]
 
 \paragraph{Ans} 
@@ -1253,14 +1274,12 @@ While keeping a $\blue{100^\circ}$ angle, we can change the side lengths to crea
 
 
 
-\paragraph{Hint 1}Let’s start by drawing. We know the lengths of all $3$ sides. How many triangles can we draw?
+\paragraph{Hint 1}Let’s start by drawing. We know the lengths of all three sides. How many right triangles can we draw?
 
-\paragraph{Hint 2}Since we are given the lengths of all $3$ sides, we can draw only one triangle.
+\paragraph{Hint 2}Since we are given the lengths of all three sides, we can draw only one right triangle with side lengths $\blue5$, $\blue{12}$ and $\blue{13}$.
 
 
 \includegraphics[scale=\shrinkfactor]{figures/227ab289b1de518857460dab83b70e050be9fa46.png}
-
-Note the triangle with side lengths $\blue5$, $\blue{12}$ and $\blue{13}$ is a right triangle.
 
 \paragraph{Hint 3}The triangle is unique.
 
@@ -1269,7 +1288,7 @@ Note the triangle with side lengths $\blue5$, $\blue{12}$ and $\blue{13}$ is a r
 \medskip
 \noindent
 \textbf{Tags:} {\footnotesize Constructing triangles, CC.7.G.A.2}\\
-\textbf{Version:} 81990b3f.. 2013-10-20
+\textbf{Version:} ba30b682.. 2013-10-21
 \smallskip\hrule
 
 
@@ -1286,25 +1305,25 @@ Note the triangle with side lengths $\blue5$, $\blue{12}$ and $\blue{13}$ is a r
 %    https://ka-perseus-graphie.s3.amazonaws.com/50ab52075216ec1ebe030aa80de8615558c71846.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/48773248b446b970cdf6c2fa7664c3fa8890378a.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/a5961a517a4e6e5e6def530e3948dc049dbfad9a.png \
-%    https://ka-perseus-graphie.s3.amazonaws.com/0fc8a765d9e1e79a7c3e4874b8f9448d3b5c1d18.png \
+%    https://ka-perseus-graphie.s3.amazonaws.com/cb4884edd39739116b62d131aa206b66f99db2cb.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/d8b2dd5b2d43266692ba3d2c35cf5638f2f3c05c.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/9bbd0fa30a5ae16d50c816c4a8c4cfc44a68146c.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/3e0462daa95058cdd7264a43f9c163723c418fd6.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/29740936508e0ec4c2d3167e2aec0f3372ce78bf.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/91996cb5320f958d2fa0f8249c77e9d88bbb2764.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/b0e7ebe35f997eac2f27bbad47f0033422d118b3.png \
-%    https://ka-perseus-graphie.s3.amazonaws.com/acf337830bf93b0d2118eb2712a2d821a3ddd4c1.png \
+%    https://ka-perseus-graphie.s3.amazonaws.com/6b60caa69910861ed0aa6e21b79d5cde304168b3.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/b1eff2246ff6077c50f40ea6bfe55bad4b8ced80.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/ef5a8edbd9d4f5680b124ce81e7f4c78a9707ed4.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/946760cec54502326e2f2708bb7c84428118c9ad.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/21924a4df5c1451289595e8ec2c9ceae30ed7de1.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/2d99bebb2da26f68f4d74679d523ed8d96db3e5c.png \
+%    https://ka-perseus-graphie.s3.amazonaws.com/c6b48cf353062cc42130d16552b68f58a6daf58e.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/afb29f0a848d89c4b6991b76cd2f1a48e594243b.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/0ddd88656709215709e4a46913277db7929349d4.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/4af5c292b250f14e2725fbff73825f6e41348a27.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/758d66a2a3006feaf0b6d196067ab8a9e5a4c587.png \
-%    https://ka-perseus-graphie.s3.amazonaws.com/c6b48cf353062cc42130d16552b68f58a6daf58e.png \
-%    https://ka-perseus-graphie.s3.amazonaws.com/8138125d70973033dceda459b359bd456038254f.png \
+%    https://ka-perseus-graphie.s3.amazonaws.com/dbd401421f460f804da516fa3a58107492fea141.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/cfa8c2afddab68081b192038f3130d47880b443e.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/b1683148f0f59becb3f7ee5221cd130e632609d7.png \
 %    https://ka-perseus-graphie.s3.amazonaws.com/8fd2ab6db3cbbe9cbdf43af4cf872835fa89ecf2.png \
@@ -1313,6 +1332,3 @@ Note the triangle with side lengths $\blue5$, $\blue{12}$ and $\blue{13}$ is a r
 
 
 \end{document}
-
-
-
