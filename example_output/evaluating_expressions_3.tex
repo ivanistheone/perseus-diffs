@@ -1,0 +1,1228 @@
+%Mon 19 Aug 2013 15:11:08 EDT
+
+\documentclass[twocolumn,10pt]{article}
+\title{Evaluating expressions 3}
+\setlength{\columnsep}{20pt} 
+\usepackage{amsmath,hyperref,cancel,graphicx}
+ \def\shrinkfactor{0.55}
+ \usepackage[margin=1.5cm]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+ 
+ \newcommand{\blue}[1]{{\color{Blue}#1}} 
+ \newcommand{\purple}[1]{{\color{Purple}#1}} 
+ \newcommand{\red}[1]{{\color{Red}#1}} 
+ \newcommand{\green}[1]{{\color{Green}#1}} 
+ \newcommand{\gray}[1]{{\color{Gray}#1}} 
+  \newcommand{\pink}[1]{{\color{Magenta}#1}}   
+
+
+\begin{document}
+\maketitle
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x07c5c04a}{x07c5c04a}}
+
+\noindent
+The surface area of a cube is equal to the sum of the areas of its six sides. The surface area of a cube with side length $x$ is given by the expression $6x^2$.
+
+Jolene has **two** cube-shaped containers that she wants to paint. One cube has side length $2$. The other cube has side length $1.5$.
+  
+**What is the total surface area she has to paint?**
+
+\paragraph{Ans} Total surface area = [[? input-number 1]]   37.5
+
+\paragraph{Hint 1}The total surface area she has to paint is equal to sum of the areas of the two cubes.
+
+\paragraph{Hint 2}The first cube has side length $\red{2}$,
+so each side of the cube has area $\red{2}^2$ and there are $\purple{6}$ sides.
+Therefore, the total surface area of that cube is given by: 
+$\purple{6}\cdot\red{2}^2=\purple{6}\cdot4=\green{24}$.
+
+
+\paragraph{Hint 3}Similarly, the second cube, with side length $\blue{1.5}$, has a surface area of $\purple{6}\cdot\blue{1.5}^2=\purple{6}\cdot 2.25=\green{13.5}$.
+
+\paragraph{Hint 4}The total surface area there is to paint is the sum of the areas of the two cubes:  
+
+\begin{align*}
+\quad A \  &= \purple{6}\cdot\red{2}^2 + \purple{6}\cdot\blue{1.5}^2  \\
+&=\purple{6}\cdot4 \ \ + \purple{6}\cdot 2.25 \\
+&=\green{24}  \ \ \ \ \  + \ \green{13.5} \\
+& =37.5
+\end{align*}
+
+Now that Jolene knows the total surface area, she has a better idea of how much paint she will need to paint them.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 633224d3.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x08e6393b}{x08e6393b}}
+
+\noindent
+Jane decides to build a new light for her desk. She wants to wire together lots of little light bulbs to form a light tower. If each level of the tower is a square with $s$ lights on each side, and the height of the tower is $h$ levels, then the total number of lights required will be $h\cdot s^2$. 
+
+Jane wants each level to have $8$ lights per side and the height of the tower to be $25$ levels. **How many lights will Jane need in total?**
+
+\paragraph{Ans} [[? input-number 1]] lights  1600
+
+\paragraph{Hint 1}We know that each level of the tower is a square with side $\blue{s}=\blue{8}$ and that the tower has a height of $\red{h}=\red{25}$ levels.
+
+\paragraph{Hint 2}Jane can find the total number of lights she will need by calculating how many lights are in each level of the tower and multiplying by the number of levels according to the formula $\red{h}\cdot \blue{s}^2$.
+
+\paragraph{Hint 3}Each level is in the shape of a square with side $\blue{s}=\blue{8}$, so there are a total of $\blue{8}^2=64$ lights on each level.
+
+\paragraph{Hint 4}Since the tower has $\red{h}=\red{25}$ levels, the total number of lights required is
+
+\begin{align*}
+\red{h}\cdot \blue{s}^2
+ & =\red{25} \cdot \blue{8}^2  \\
+ & = \red{25}\cdot 64 \\
+ & = 1600.
+\end{align*}
+
+\paragraph{Hint 5}The total number of lights required to build the tower is $1600$ lights.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 676bb383.. 2013-07-05
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x09334b14}{x09334b14}}
+
+\noindent
+You are given a mixed bag with $r$ red candies and $b$ blue candies. If you draw a candy randomly from this bag, the probability of getting a blue candy is given by the expression $\dfrac{b}{b+r}\,$. 
+
+**What is the probability of picking a blue candy from a bag with $10$ blue candies and $20$ red candies?**
+
+\paragraph{Ans} [[? input-number 1]]  0.3333333333333333
+
+\paragraph{Hint 1}We are given the number of red and blue candies in the bag: $\red{r=20}$ and $\blue{b=10}$.
+We want to use the formula  $\dfrac{\blue{b}}{ \blue{b}+\red{r}}\,$ to find the probability of picking a blue ball from the bag.
+
+\paragraph{Hint 2}Plugging in the values  $\red{r=20}$ and $\blue{b=10}$ into the formula $\dfrac{\blue{b}}{ \blue{b}+\red{r}}\,$ we obtain the following expression:  
+
+\begin{align*}
+\dfrac{\blue{b}}{ \blue{b}+\red{r}}
+ &=\dfrac{\blue{10}}{ \blue{10}+\red{20}} \\[2mm]
+ &=\dfrac{10}{ 30 } = \dfrac{1\cdot 10}{ 3 \cdot 10 } \\[1mm]
+ &= \dfrac{1 \cdot \green{\cancel{10}}}{3 \cdot \green{\cancel{10}} } \\[1mm]
+ &=\dfrac{1}{3}
+\end{align*}
+
+\paragraph{Hint 3}The probability of picking a blue ball from this bag is equal to $\dfrac{1}{3} \approx 0.3333\ldots$.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 60328655.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x1205d7d7}{x1205d7d7}}
+
+\noindent
+John sews shirts for a living. He knows the amount of cloth he needs to buy is $6n+\frac{1}{2}m^2$ square feet, where $n$ is the number of small shirts he wants to make and $m$ is the number of large shirts he wants to make.
+
+**How much cloth should John buy if he wants to make $10$ small shirts and $4$ large shirts?**
+
+\paragraph{Ans} [[? input-number 1]] square feet  68
+
+\paragraph{Hint 1}We are told that John wants to make $\red{n=10}$ small shirts and $\blue{m=4}$ large shirts.
+
+We can use the formula $6\red{n}+\frac{1}{2}\blue{m}^2$ to figure out how many square feet of cloth John needs to buy.
+
+\paragraph{Hint 2}Plugging in the values  $\red{n=10}$ and $\blue{m=4}$ into the formula $6\red{n}+\frac{1}{2}\blue{m}^2$ we obtain the following expression:  
+
+\begin{align*}
+6\red{n}+\frac{1}{2}\blue{m}^2
+ &= 6(\red{10})+\frac{1}{2}\cdot\blue{4}^2\\
+ &= 6\cdot 10 +\frac{1}{2}\cdot 4^{\green{2}}  \\
+ &= 6 \green{\cdot} 10 +\frac{1}{2}\green{\cdot}16    \\
+ &= 60 \green{+} 8 \\[2mm]
+ &= 68
+\end{align*}
+
+Note the order in which we performed the operations when evaluating the expression.
+First we computed the exponent $4^{\green{2}}=4\cdot 4= 16$. Then we computed the two products,
+and we carried out the addition last.
+
+\paragraph{Hint 3}Therefore, John needs to buy $68$ square feet of cloth.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} e9176d51.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x28b79aff}{x28b79aff}}
+
+\noindent
+The price for your annual visit at the dentist is calculated according to the formula $50+100n$, where  $n$ is the number of cavities the dentist finds.
+
+ **What will be the cost of the visit if the dentist finds $2$ cavities?**
+
+\paragraph{Ans} $\$$ [[? input-number 1]]  250
+
+\paragraph{Hint 1}Don't worry, you are not at the dentist—this is just a math question!
+
+The cost of the visit, in dollars, is described by the math expression $\green{50} + \red{100}\purple{n}$, where $\$50$ is the base price for the visit and $\$100$ is the price for repairing one cavity.
+
+We have to evaluate this expression in the case of $\purple{n=2}$ cavities.
+
+\paragraph{Hint 2}Plugging in the value $\purple{n=2}$ into the formula $\green{50} + \red{100}\purple{n}$ we obtain the following expression:  
+
+\begin{align*}
+\green{50} + \red{100}\purple{n}
+ &= \green{50} + \red{100}\green{\cdot}\purple{2}\\
+ &= 50 \green{+} 200 \\
+ &= 250
+\end{align*}
+
+Note the order in which we performed the operations when evaluating the expression. We computed the product before carrying out the addition.
+
+\paragraph{Hint 3}The cost of the visit to the dentist will be $\$250$.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 8705fe41.. 2013-06-26
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x2995b0f5}{x2995b0f5}}
+
+\noindent
+The power consumed by an electric light bulb is given by the formula $P=121x^2$, where $x$ is the number of amperes of electric current passing through it.
+
+**How much power will this light bulb consume if there is a current of  $0.9091$ amperes passing through it?**
+
+
+\paragraph{Ans} $P =$ [[? input-number 1]] watts  100
+
+\paragraph{Hint 1}We are given the formula for the power consumed by the light bulb when a current $\red{x}$ flows through it:
+
+$\quad P= \purple{121}\red{x}^2$.
+
+We are also told the current is $\red{x=0.9091}$ amperes.
+
+\paragraph{Hint 2}Plugging in the value $\red{x=0.9091}$ into the formula for the power we obtain the following expression:  
+
+\begin{align*}
+P 
+& =\purple{121}\red{x}^2 \\[1mm]
+& = \purple{121}\left(\red{0.9091}\right)^2 \\[1mm]
+& = 121\left(0.9091\right)^{\green{2}}  \\[1mm]
+& = 121\green{\cdot} 0.8264 \\[1.5mm]
+ &= 100
+\end{align*}
+
+Note the order of operations: we computed the exponent before taking the product.
+
+\paragraph{Hint 3}Therefore, the power consumed by the light bulb is $P=100$ watts.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 26883bc7.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x412a82bc}{x412a82bc}}
+
+\noindent
+Georg is drawing an intricate pattern using a pencil and an eraser. He begins by drawing a straight line. He then erases the middle one-third of the line leaving two line segments with a gap in the middle. He then repeats this procedure again erasing the middle one-third of each segment. 
+
+If Georg starts with a line of length $\ell$
+then after $n$ uses of the eraser, the total length of the line remaining will be $\ \ell \cdot(\frac{2}{3})^n$.
+
+**What will be the length of the line remaining if Georg starts with a line of length $9$ cm and repeats the eraser procedure for $4$ times?**
+
+\paragraph{Ans} [[? input-number 1]] cm  1.7777777777777777
+
+\paragraph{Hint 1}Let's first look at the formula for calculating the length of line that remains, when Georg starts with a line of length $\gray{\ell}$ and uses the eraser $\purple{n}$ times. 
+
+Length of line remaining = $\gray{\ell}\cdot\left(\blue{\frac{2}{3}} \right)^{\purple{n}}$
+
+\paragraph{Hint 2}Let's now use this formula to calculate the length of line that remains after Georg repeats the eraser procedure $\purple{n=4}$ times starting from a line with length $\gray{\ell}=\gray{9}$ cm.
+
+The length of line remaining is given by the expression:
+
+
+\begin{align*}
+\gray{\ell}\cdot\left(\blue{\frac{2}{3}} \right)^{\purple{n}}
+ &=\gray{9}\cdot\left(\blue{\frac{2}{3}}\right)^{\purple{4}}  \\[1mm]
+ &= \gray{9} \cdot \dfrac{16}{81}  \\[1mm]
+ &=  \dfrac{16}{9}
+\end{align*}
+
+\paragraph{Hint 3}So the length of the line remaining is 
+$\dfrac{16}{9}$ cm, which is approximately equal to  $1.78$ cm.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 01e2b6ce.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x42273a9f}{x42273a9f}}
+
+\noindent
+John sews shirts for a living. He knows the amount of cloth he needs to buy is $16n+2m^2$ meters, where $n$ is the number of small shirts he wants to make and $m$ is the number of large shirts he wants to make.
+
+**How much cloth should John buy if he wants to make $10$ small shirts and $5$ large shirts?**
+
+\paragraph{Ans} [[? input-number 1]] meters  210
+
+\paragraph{Hint 1}We are told that John wants to make $\red{n=10}$ small shirts and $\blue{m=5}$ large shirts.
+
+We can use the formula $16\red{n}+2\blue{m}^2$ to figure out how many meters of cloth John needs to buy.
+
+\paragraph{Hint 2}Plugging in the values  $\red{n=10}$ and $\blue{m=5}$ into the formula $16\red{n}+2\blue{m}^2$ we obtain the following expression:  
+
+\begin{align*}
+16\red{n}+2\blue{m}^2
+ &= 16(\red{10})+2\cdot\blue{5}^2\\
+ &= 16\cdot 10 +2\cdot5^{\green{2}}  \\
+ &= 16 \green{\cdot} 10 +2\green{\cdot}25    \\
+ &= 160 \green{+} 50 \\
+ &= 210.
+\end{align*}
+
+Note the order in which we performed the operations when evaluating the expression.
+First we computed the exponent $5^{\green{2}}=5\cdot 5= 25$. Then we computed the two products,
+and we carried out the addition last.
+
+\paragraph{Hint 3}Therefore, John needs to buy $210$ meters of cloth.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 41269e46.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x43cd1406}{x43cd1406}}
+
+\noindent
+Vlad is studying a chemical reaction in which molecules of type A are consumed. The number of molecules of type A remaining is described by the expression $N \cdot(\frac{2}{3})^t$, where $N$ represents the initial number of molecules and $t$ measures the time in minutes.
+
+If Vlad's experiment starts with $8100$ molecules of type A, **how many molecules will be left after $4$  minutes?**
+
+\paragraph{Ans} [[? input-number 1]] molecules left  1600
+
+\paragraph{Hint 1}Let's use the formula to calculate the number of molecules left.  
+
+Number of molecules left = $\blue{N} \cdot(\frac{2}{3})^{\red{t}}$.
+
+We're told that the initial number of molecules is $\blue{N=8100}$ and asked to find how many are left after $\red{t=4}$ minutes. All we have to do is plug these numbers into the formula.
+
+\paragraph{Hint 2}After $\red{4}$ minutes have elapsed, the number of molecules left will be:  
+
+\begin{align*}
+\blue{8100} \cdot \left(\frac{2}{3} \right)^{\red{4}} 
+ & =\blue{8100} \left(\frac{2^{\red{4}}}{3^{\red{4}}}\right) \\
+ & =\blue{8100} \left(\frac{2\cdot 2\cdot 2\cdot 2}{3\cdot 3\cdot 3\cdot 3}\right) \\
+ & =\blue{8100} \left(\frac{16}{81}\right)  \\
+ & =\frac{8100 \cdot 16}{81} 
+=\frac{\cancel{81} \cdot 100 \cdot 16}{\cancel{81}}  \\[1mm]
+ & = 1600
+\end{align*}
+
+
+\paragraph{Hint 3}After $\red{4}$ minutes have elapsed, there will be $1600$ molecules of type A left.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 2112deb2.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x536a5f4e}{x536a5f4e}}
+
+\noindent
+Each of the four sides of your school has the shape of a square: there are $x$ floors to the building and $x$ windows per floor. Your school's janitor just told you that the mathematical expression which describes the total number of windows at the school is $4x^2$.
+
+**What is the number of windows if your school has $x=5$ floors?**
+
+\paragraph{Ans} [[? input-number 1]] windows  100
+
+\paragraph{Hint 1}Let's look at the formula we are given. We're told that the number of windows on the school is $\green{4}\red{x}^{\blue{2}}$. This is because the school has $\green{4}$ sides and each side is a $\blue{\textrm{square}}$ with $\red{x}$ windows per side.
+
+\paragraph{Hint 2}Since we are told the school has $\red{x}=\red{5}$ floors, we can plug this number into the formula to find the total number of windows:
+
+\begin{align*}
+\green{4}\red{x}^{\blue{2}} 
+&=\green{4}\cdot \red{5}^{\blue{2}} \\
+&= 4\cdot 25 \\
+&=100
+\end{align*}
+
+\paragraph{Hint 3}The total number of windows on your school is $100$.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} caf1a99e.. 2013-06-26
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x54c5eee8}{x54c5eee8}}
+
+\noindent
+You are given a biased coin for which the probability of getting heads is $p=\dfrac{2}{3}$ and the probability of getting tails is $q=\dfrac{1}{3}$.
+The probability of getting heads at least once in two throws is given by the following expression: 
+
+$\qquad p^2+2pq$
+
+**Find the numeric value of this expression.**
+
+\paragraph{Ans} [[? input-number 1]]  0.8888888888888888
+
+\paragraph{Hint 1}We are given the values of the two variables $\red{p=\frac{2}{3}}$ and $\blue{q=\frac{1}{3}}$. 
+We want to use the formula  $\red{p}^2+2\red{p}\blue{q}\ $  to find the probability of seeing the coin fall heads at least once in two throws.
+
+\paragraph{Hint 2}Plugging in the values  $\red{p=\frac{2}{3}}$ and $\blue{q=\frac{1}{3}}$ into the formula $\red{p}^2+2\red{p}\blue{q}\ $, we obtain the following expression:  
+
+\begin{align*}
+\red{p}^2+2\red{p}\blue{q} 
+ & =  \left(\red{\frac{2}{3}}\right)^{\!\green{2}}+2\left(\red{\frac{2}{3}}\right)\left(\blue{\frac{1}{3}}\right)  \\[2mm]
+ & =  \left(\frac{2^{\green{2}}}{3^{\green{2}}}\right)+2\left(\frac{2}{3}\right)\left(\frac{1}{3}\right)  \\[2mm]
+ & =  \left(\frac{4}{9}\right)+\frac{2}{1}\green{\cdot}\frac{2}{3}\green{\cdot}\frac{1}{3}  \\[2mm]
+ & =  \frac{4}{9}+\dfrac{2 \cdot 2 \cdot 1}{1 \cdot 3 \cdot 3}\\[2mm]
+ & =  \frac{4}{9}  \green{+} \dfrac{4}{9}\\[2mm]
+ &= \dfrac{8}{9}
+\end{align*}
+
+Note the order in which we performed the operations when evaluating the expression.
+First we computed the exponents, then we computed the products, and finally computed the addition in the last step.
+
+\paragraph{Hint 3}The probability of getting heads at least once in two throws of this biased coin is   
+
+$\qquad p^2+2pq=\dfrac{8}{9} \approx 0.8888\ldots$
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 7f6eebb6.. 2013-07-29
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x5859a152}{x5859a152}}
+
+\noindent
+An apple grower grows three types of apple trees. The formula which describes how many bags of apples he produces is $2a^3 + 4b+10c^2$, where $a$ is the number of trees of Type A he has, $b$ is the number of trees of Type B, and $c$ is the number of trees of Type C.
+
+**How many bags of apples will the grower produce if he has $5$ trees of Type A, $10$ trees of Type B, and $2$ trees of Type C?**
+
+
+
+
+\paragraph{Ans} [[? input-number 1]] bags of apples  330
+
+\paragraph{Hint 1}We are told the farmer has $\red{a=5}$ trees of Type A, $\green{b=10}$ trees of Type B, and $\blue{c=2}$ trees of Type C.
+
+We can use the formula  $2\red{a}^3 + 4\green{b}+10\blue{c}^2$ to figure out how many bags of apples the farmer will produce.
+
+\paragraph{Hint 2}Plugging in the values  $\red{a=5}$, $\green{b=10}$, and $\blue{c=2}$ into the formula for the number of bags of apples $2\red{a}^3 + 4\green{b}+10\blue{c}^2$, we obtain the following expression:  
+
+\begin{align*}
+2\red{a}^3 + 4\green{b}+10\blue{c}^2
+ &= 2\cdot \red{5}^3 + 4\cdot \green{10}+10\cdot\blue{2}^2 \\
+ &= 2\cdot 5^{\purple{3}} + 4\cdot 10+10\cdot 2^{\purple{2}} \\
+ &= 2\purple{\cdot} 125 + 4\purple{\cdot} 10 +10\purple{\cdot} 4 \\
+ &= 250 \purple{+} 40 \purple{+} 40 \\
+ &= 330.
+\end{align*}
+
+Note the order in which we performed the operations when evaluating the expression.
+First we computed the exponents, then we computed the products, and we carried out the additions last.
+
+\paragraph{Hint 3}The farmer produces $330$ bags of apples.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 262a3f49.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x596cd19d}{x596cd19d}}
+
+\noindent
+A chemist knows he will need $6n+4m^2$ liters of solution to produce $n$ grams of product N and $m$ grams of product M.
+
+**How many liters of solution will the chemist need if he wants to produce $10$ grams of product N and $5$ grams of product M?**
+
+\paragraph{Ans} [[? input-number 1]] liters  160
+
+\paragraph{Hint 1}We are told that the chemist wants to make $\red{n=10}$ grams of the product N and $\blue{m=5}$ grams of product M.
+
+We can use the formula $6\red{n}+4\blue{m}^2$ to figure out how many liters of solution he will need.
+
+\paragraph{Hint 2}Plugging in the values  $\red{n=10}$ and $\blue{m=5}$ into the formula $6\red{n}+4\blue{m}^2$ we obtain the following expression:  
+
+\begin{align*}
+6\red{n}+4\blue{m}^2
+ & = 6\cdot\red{10}+ 4\cdot\blue{5}^{\green{2}} \\
+ &= 6 \green{\cdot} 10 + 4\green{\cdot}25     \\
+ &= 60 \green{+} 100 \\
+ &= 160
+\end{align*}
+
+Note the order of operations: exponents are computed first, followed by multiplications, and additions last.
+
+\paragraph{Hint 3}The chemist will need $160$ liters of solution.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 740e5689.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x5c75eb87}{x5c75eb87}}
+
+\noindent
+The volume of a cube is equal to its length times its width times its height. A cube with side $x$ has length $\red{x}$, width $\green{x}$, and height $\blue{x}$, so its volume is equal to $\red{x}\cdot \green{x} \cdot \blue{x} =x^3$. 
+
+You have two cubes that you fill with water to make ice cubes. The first cube has a side length of $6$. The second cube has a side length of $5$. 
+**What is the total volume of ice you can make?**
+
+\paragraph{Ans} 
+
+\paragraph{Hint 1}To find the total volume of ice, let's write the expression for the volume of each cube and then add the two expressions together.
+
+\paragraph{Hint 2}We know the volume of a cube with side length $x$ is equal to its side raised to the third power $V=x^3$.
+
+To find the volume of the first cube, we substitute the value $\blue{x=6}$ into the formula and find the first volume of ice is $\blue{6}^3=\purple{216}$. 
+
+\paragraph{Hint 3}The volume of the second cube, with side length $\green{5}$, is $\green{5}^3=\pink{125}$. 
+
+\paragraph{Hint 4}We can now add the volumes of the two cubes to get the total volume:
+
+$\qquad \blue{6}^3+\green{5}^3=\purple{216}+\pink{125}=341$. 
+
+
+\paragraph{Hint 5}The total volume of ice cubes is $341$.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 51c0ef80.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x5f266efb}{x5f266efb}}
+
+\noindent
+A rectangle with base $a$ and height $b$ has area $ab$. A square with side length $x$ has area $x^2$.
+
+Luigi is installing solar panels on his rooftop to generate electricity from the sun. He bought $20$ small square panels with size $2$ ft by $2$ ft and $5$ big rectangular panels with size $10$ ft by $4$ ft.
+**What is the total area of solar panels Luigi has installed?** 
+
+\paragraph{Ans} total area = [[? input-number 1]] sq ft  280
+
+\paragraph{Hint 1}The total area of solar panels is the sum of the areas of the square panels and the areas of the rectangular panels.
+
+Since Luigi has $\blue{20}$ square panels and $\red{5}$ rectangular panels, the total area of solar panels is described by the following expression:  
+
+$\qquad \blue{20} \pink{x}^2 + \red{5} \purple{a}\green{b}$
+
+In this equation, $\pink{x}^2$ is the area of each square panel
+and $\purple{a}\green{b}$ is the area of each rectangular panel.
+
+
+\paragraph{Hint 2}We know the square panels have side length $\pink{x=2}$ ft. The rectangular panels have dimensions $\purple{a=10}$ ft by $\green{b=4}$ ft.
+
+
+
+\paragraph{Hint 3}We can plug the values of $x$, $a$, and $b$ into the expression $\blue{20} \pink{x}^2 + \red{5} \purple{a}\green{b}$ to obtain the total area of the solar panels:
+
+\begin{align*}
+\blue{20} \pink{x}^2 + \red{5} \purple{a}\green{b}
+& =\blue{20}\cdot\pink{2}^{\gray{2}} + \red{5}\cdot\purple{10}\cdot\green{4}  \\[1mm]
+ &= 20 \gray{\cdot} 4 + 5\gray{\cdot}10\gray{\cdot}4 \\
+ &= 80 \gray{+} 200 \\
+ &= 280
+\end{align*}
+
+Note the order of operations: we computed the exponent first,  then we calculated the products, and we computed the sum last.
+
+
+\paragraph{Hint 4}The total area of Luigi's solar panels is $280$ sq ft.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} e5650029.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x5f68beb4}{x5f68beb4}}
+
+\noindent
+Diana is considering making an investment with a company which offers a return rate of $7\%$ per year. If she invests an initial sum of $S$ dollars, her investment will grow according to the formula $S\cdot (1.07)^n$ where $n$ is the number of years.
+
+**What will be the value of Diana's investment if she invests $10000$ dollars for $4$ years?**
+
+\paragraph{Ans} [[? input-number 1]] dollars  13107.96
+
+\paragraph{Hint 1}Let's use the formula to find the value of Diana's investment:
+
+Value of investment = $\blue{S} \cdot(\purple{1.07})^{\red{n}}$.
+
+We're told that the initial investment is $\blue{S=10000}$ dollars and asked to find the value of the investment  after $\red{n=4}$ years. All we have to do is plug these numbers into the formula.
+
+\paragraph{Hint 2}We can use the calculator to calculate the value of the investment after $\red{4}$ years have elapsed:
+
+\begin{align*}
+\blue{10000} \cdot \left(\purple{1.07}\right)^{\red{4}} 
+ & =\blue{10000}\left( 1.07\cdot 1.07\cdot 1.07\cdot 1.07 \right) \\
+ & =\blue{10000} \left( 1.310796 \right)  \\
+ & = 10000 \cdot 1.310796 \\
+ & =13\:107.96
+\end{align*}
+
+
+\paragraph{Hint 3}After $\red{4}$ years, the investment will have grown to $13107.96$ dollars.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 50445f62.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x62507a12}{x62507a12}}
+
+\noindent
+A prism with length $\ell$, width $w$, and height $h$ has volume $V=\ell w h$.
+
+**Find the volume of a prism which has a base of $5$ meters by $3$ meters, and a height of $4$ meters.**
+
+\paragraph{Ans} V = [[? input-number 1]] meters cubed  60
+
+\paragraph{Hint 1}We are given the general formula for the volume of a prism and asked to find the volume for a prism with sides lengths $\red{\ell=5}$ and $\green{w=3}$, and height $\blue{h=4}$ meters.
+
+\paragraph{Hint 2}Plugging in the values 
+$\red{\ell=5}$, 
+$\green{w=3}$, 
+and $\blue{h=4}$ 
+into the formula 
+$V=\red{\ell} \green{w} \blue{h}$, we obtain  
+
+\begin{align*}
+\qquad \red{\ell} \green{w} \blue{h}
+ &= \red{5}\cdot \green{3}\cdot\blue{4}
+ =  60
+\end{align*}
+
+\paragraph{Hint 3}So the prism has a volume of $60$ meters cubed.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} d1bea02c.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x64f0d54f}{x64f0d54f}}
+
+\noindent
+A chemist knows she will need $5n+\dfrac{m}{10}$ liters of solution to produce $n$ grams of product N and $m$ grams of product M.
+
+**How many liters of solution will the chemist need if she wants to produce $2$ grams of product N and $40$ grams of product M?**
+
+\paragraph{Ans} [[? input-number 1]] liters  14
+
+\paragraph{Hint 1}We are told that the chemist wants to make $\red{n=2}$ grams of the product N and $\blue{m=40}$ grams of product M.
+
+We can use the formula $5\red{n}+\dfrac{\blue{m}}{10}$ to figure out how many liters of solution she will need.
+
+\paragraph{Hint 2}Plugging in the values  $\red{n=2}$ and $\blue{m=40}$ into the formula $5\red{n}+\dfrac{\blue{m}}{10}$ we obtain the following expression:  
+
+\begin{align*}
+5\red{n}+\dfrac{\blue{m}}{10} 
+ & = 5\cdot\red{2}+\dfrac{\blue{40}}{10} \\[1mm]
+ &= 5 \green{\cdot} 2 + \green{  \dfrac{40}{10} }     \\
+ &= 10 \green{+} 4 \\[2mm]
+ &= 14
+\end{align*}
+
+Note the order of operations: we computed the product and the division operations first, followed by the addition operation.
+
+\paragraph{Hint 3}The chemist will need $14$ liters of solution.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 71518094.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x70bf4e2a}{x70bf4e2a}}
+
+\noindent
+You have been tasked with preparing the sandwiches for a mountain hike. Each sandwich takes $2$ slices of bread, and you want to prepare $3$ sandwiches for each person going on the hike. 
+
+**How many slices of bread will you need if $4$ people are going on the hike?**
+
+\paragraph{Ans} 
+
+\paragraph{Hint 1}You will need $\pink{2}$ slices of bread per sandwich and  $\blue{3}$ sandwiches per person, which makes $\pink{2}\cdot\blue{3}=6$ slices of bread per person.
+
+\paragraph{Hint 2}If there are $\purple{n}$ people going on the mountain hike, you will need $\pink{2}\cdot\blue{3}\cdot\purple{n}=6\purple{n}$ slices of bread to prepare the sandwiches.
+
+\paragraph{Hint 3}Since there are $\purple{4}$ people going on the mountain hike, you will need $6\cdot\purple{4}=24$ slices of bread.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} aa1c2d47.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x7389fdfe}{x7389fdfe}}
+
+\noindent
+A rectangle with base $a$ and height $b$ has area $ab$. A square with side length $x$ has area $x^2$.
+
+A farmer just finished a day of planting trees. In the morning, he planted a field of trees in the shape of a square of size $12$ trees by $12$ trees. In the afternoon, he planted another field in the shape of a rectangle of size $4$ trees by $20$ trees.
+
+**How many trees did the farmer plant in total today?**
+
+\paragraph{Ans} [[? input-number 1]] trees  224
+
+\paragraph{Hint 1}The total number of trees the farmer planted is the number of trees in the square-shaped field plus the number of trees in the rectangle-shaped field.
+
+\paragraph{Hint 2}Let’s first calculate the number of trees in the square field using the formula for the area of a square.
+
+We are told the square has $\blue{12}$ trees per side, so the total number of trees is $\blue{12}^2= \blue{12} \cdot \blue{12}  =  \red{144}$.
+
+\paragraph{Hint 3}Let’s now look at the number of trees in the rectangular field.  We are told it contains $\purple{a=4}$ rows of trees  and that each row contains $\green{b=20}$ trees. 
+We can use the formula for the area of a rectangle to find the total number of trees.
+
+The number of trees in the rectangular field is $\purple{a}\green{b}=\purple{4} \cdot \green{20}=\pink{80}$.
+
+\paragraph{Hint 4}In total, the farmer has planted $\red{144} + \pink{80}=224$ trees today.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 0c1074de.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/x9a67261f}{x9a67261f}}
+
+\noindent
+The table you're working at keeps wobbling. You decide to fix it by making a thick pad of paper from folded sheets of paper. **Each time you fold a sheet in two, the number of layers doubles**. You fold a first sheet of paper $5$ times and stick it beneath the wobbly leg. It doesn't quite do the trick, so you fold another sheet of paper $3$ times and put it beneath the wobbly leg too. 
+
+**In total, how many layers of paper did it take to prop up the table?**
+
+\paragraph{Ans} [[? input-number 1]] layers  40
+
+\paragraph{Hint 1}Each time you fold the sheet, the number of layers doubles.  So a sheet which has been folded $\purple{n}$ times has $2^{\purple{n}}$ layers.
+
+The total number of layers of paper equals the layers in the first sheet plus the layers in the second sheet. 
+
+\paragraph{Hint 2}Let’s calculate the number of layers in the first sheet. 
+
+We multiply by $2$ for each fold in the sheet. After the $\purple{\textrm{fifth}}$ fold, the sheet will have $2 \cdot 2\cdot 2 \cdot 2 \cdot 2=2^\purple{5}=\blue{32}$ layers.
+
+\paragraph{Hint 3}Similarly, the second sheet of paper will have $2\cdot 2\cdot 2 = 2^\pink{3}=\green{8}$ layers, since it was folded $\pink{3}$ times.
+
+\paragraph{Hint 4}The total number of layers it took to prop-up the table is the sum of the layers from the two sheets:  $2^\purple{5} + 2^\pink{3} = \blue{32} + \green{8} = 40$ layers.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 97948b62.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xb1b6c90f}{xb1b6c90f}}
+
+\noindent
+The formula for the surface area of a cube of side length $s$ is $A = 6 s^2$.   
+**Find the surface area of a cube with side length $\frac{3}{2}$**.
+
+\paragraph{Ans} A = [[? input-number 1]]  13.5
+
+\paragraph{Hint 1}We are given the general formula for the surface area of a cube and asked to find the surface area of cube with side length $\blue{s=\dfrac{3}{2}}$.
+
+\paragraph{Hint 2}Plugging in the value $\blue{s=\dfrac{3}{2}}$ the formula $\red{6}\blue{s}^2$, we obtain the following expression:  
+
+\begin{align*}
+\red{6}\blue{s}^2
+ &= \red{6}\left(\blue{\dfrac{3}{2}}\right)^{\!\green{2}}\\[1mm]
+ &= 6 \green{\cdot} \left(\dfrac{9}{4}\right)  \\[1mm]
+ &=  \dfrac{54}{4} = 
+\dfrac{27 \cdot 2}{2 \cdot 2 } =
+\dfrac{27 \cdot \green{\cancel{2}}}{2 \cdot \green{\cancel{2}} } \\[2mm]
+ &=  \purple{\dfrac{27}{2}} \\
+\end{align*}
+
+Note the steps we took to evaluate this expression.
+The first step was to compute the exponent:   
+
+$\qquad \left(\dfrac{3}{2}\right)^{\green{2}}= \dfrac{3^{\green{2}}}{2^{\green{2}}}=\dfrac{9}{4}$
+
+In the second step we multiplied by $6$:  
+
+$\qquad 
+6 \green{\cdot} \left(\dfrac{9}{4}\right)
+= \dfrac{6}{1} \green{\cdot} \dfrac{9}{4}
+= \dfrac{6 \green{\cdot} 9}{1 \green{\cdot} 4}
+= \dfrac{54}{4}$
+
+In the final step we simplified the fraction $\green{\textrm{cancelling}}$ the factor $2$ in the fraction.
+
+\paragraph{Hint 3}A cube of side $\blue{s=\dfrac{3}{2}}$ has a surface area of $A=\purple{\dfrac{27}{2}}\,$.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 474132d2.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xc1ec650f}{xc1ec650f}}
+
+\noindent
+An apple grower grows three types of apple trees. The formula which describes how many bags of apples he produces is $3a^2 + 4b^2+10c$, where $a$ is the number of trees of Type A he has, $b$ is the number of trees of Type B, and $c$ is the number of trees of Type C.
+
+**How many bags of apples will the grower produce if he has $10$ trees of Type A, $5$ trees of Type B, and $20$ trees of Type C?**
+
+
+
+
+\paragraph{Ans} [[? input-number 1]] bags of apples  600
+
+\paragraph{Hint 1}We are told the farmer has $\red{a=10}$ trees of Type A, $\green{b=5}$ trees of Type B, and $\blue{c=20}$ trees of Type C.
+
+We can use the formula  $3\red{a}^2 + 4\green{b}^2+10\blue{c}$ to figure out how many bags of apples the farmer will produce.
+
+\paragraph{Hint 2}Plugging in the values  $\red{a=10}$, $\green{b=5}$, and $\blue{c=20}$ into the formula for the number of bags of apples $3\red{a}^2 + 4\green{b}^2+10\blue{c}$, we obtain the following expression:  
+
+\begin{align*}
+3\red{a}^2 + 4\green{b}^2+10\blue{c}
+ &= 3\cdot \red{10}^2 + 4\cdot \green{5}^2+10\cdot\blue{20} \\
+ &= 3\cdot 10^{\purple{2}} + 4\cdot 5^{\purple{2}}+10\cdot 20 \\
+ &= 3\purple{\cdot} 100 + 4\purple{\cdot} 25 +10\purple{\cdot} 20 \\
+ &= 300 \purple{+} 100 \purple{+} 200 \\
+ &= 600.
+\end{align*}
+
+
+Note the order in which we performed the operations when evaluating the expression.
+First we computed the exponents, then we computed the products, and we carried out the additions last.
+
+\paragraph{Hint 3}The farmer produces $600$ bags of apples.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} dc04a6e9.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xd3fd3624}{xd3fd3624}}
+
+\noindent
+The table you're working at keeps wobbling. You decide to fix it by making a thick pad of paper from folded sheets of paper. **Each time you fold a sheet in two, the number of layers doubles**. You fold a first sheet of paper $3$ times and stick it beneath the wobbly leg. It doesn't quite do the trick, so you fold another sheet of paper $2$ times and put it beneath the wobbly leg too. 
+
+**In total, how many layers of paper did it take to prop up the table?**
+
+\paragraph{Ans}  $2^3+2^2$ 
+
+\paragraph{Hint 1}Each time you fold the sheet, the number of layers doubles.  So a sheet which has been folded $\purple{n}$ times has $2^{\purple{n}}$ layers.
+
+The total number of layers of paper equals the layers in the first sheet plus the layers in the second sheet. 
+
+\paragraph{Hint 2}Let’s calculate the number of layers in the first sheet. 
+
+We multiply by $2$ for each fold in the sheet. After the $\purple{\textrm{third}}$ fold, the sheet will have $2 \cdot 2\cdot 2=2^\purple{3}=\blue{8}$ layers.
+
+\paragraph{Hint 3}Similarly, the second sheet of paper will have $2\cdot 2 = 2^\pink{2}=\green{4}$ layers, since it was folded $\pink{2}$ times.
+
+\paragraph{Hint 4}The total number of layers it took to prop-up the table is the sum of the layers from the two sheets:  $2^\purple{3} + 2^\pink{2} = \blue{8} + \green{4} = 12$ layers.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} befe0b3e.. 2013-07-15
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xd54125e6}{xd54125e6}}
+
+\noindent
+An apple grower grows three types of apple trees. The formula which describes how many bags of apples he produces is $9a + 16b+10c$, where $a$ is the number of trees of Type A he has, $b$ is the number of trees of Type B, and $c$ is the number of trees of Type C.
+
+**How many bags of apples will the grower produce if he has 10 trees of Type A, 5 trees of Type B, and 20 trees of Type C?**
+
+
+
+
+\paragraph{Ans} [[? input-number 1]] bags of apples  370
+
+\paragraph{Hint 1}We are told the farmer has $\red{a=10}$ trees of Type A, $\green{b=5}$ trees of Type B, and $\blue{c=20}$ trees of Type C.
+
+We can use the formula $9\red{a} + 16\green{b}+10\blue{c}$ to figure out how many bags of apples the farmer will produce.
+
+\paragraph{Hint 2}Plugging in the values  $\red{a=10}$, $\green{b=5}$, and $\blue{c=20}$ into the formula for the number of bags of apples $9\red{a} + 16\green{b}+10\blue{c}$, we obtain the following expression:  
+
+\begin{align*}
+9\red{a} + 16\green{b}+10\blue{c}
+ &= 9\cdot \red{10} + 16\cdot\green{5}+10\cdot\blue{20} \\
+ &= 9\purple{\cdot} 10 +  16\purple{\cdot}5 +10\purple{\cdot} 20 \\
+ &= 90 \purple{+} 80 \purple{+} 200 \\
+ &= 370.
+\end{align*}
+
+Note the order in which we performed the operations when evaluating the expression. First we computed the products and then we carried out the additions.
+
+\paragraph{Hint 3}The farmer produces $370$ bags of apples.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} 968c6edd.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xd7fb3097}{xd7fb3097}}
+
+\noindent
+Georg is drawing an intricate pattern using a pencil and an eraser. He begins by drawing a straight line. He then erases the middle one-third of the line, leaving two line segments with a gap in the middle. He then repeats this procedure again erasing the middle one-third of each segment. 
+
+If Georg starts with a line of length $\ell$
+then after $n$ uses of the eraser, the total length of the line remaining will be $\ \ell \cdot(\frac{2}{3})^n$.
+
+**What will be the length of the line remaining if Georg starts with a line of length $27$ cm and repeats the eraser procedure $3$ times?**
+
+\paragraph{Ans} [[? input-number 1]] cm  8
+
+\paragraph{Hint 1}Let's first look at the formula for calculating the length of line that remains, when Georg starts with a line of length $\gray{\ell}$ and uses the eraser $\purple{n}$ times. 
+
+Length of line remaining = $\gray{\ell}\cdot\left(\blue{\frac{2}{3}} \right)^{\purple{n}}$
+
+\paragraph{Hint 2}Let's now use this formula to calculate the length of line that remains after Georg repeats the eraser procedure $\purple{n=3}$ times starting from a line with length $\gray{\ell}=\gray{27}$ cm.
+
+The length of line remaining is given by the expression:
+
+\begin{align*}
+\gray{\ell}\cdot\left(\blue{\frac{2}{3}} \right)^{\purple{n}}
+ &=\gray{27}\cdot\left(\blue{\frac{2}{3}}\right)^{\purple{3}}  \\[1mm]
+ &= \gray{27} \cdot \dfrac{8}{27}  \\[1mm]
+ &=  8
+\end{align*}
+
+\paragraph{Hint 3}So the length of the line remaining is 
+$8$ cm.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 931a5e4d.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xdaea5822}{xdaea5822}}
+
+\noindent
+The power consumed by an electric lamp is given by the formula $P=0.0165v^2$, where $v$ is the voltage of wall outlet it is connected to.
+**How much power will this lamp consume if plugged into a wall outlet which gives 110 volts?**
+
+
+\paragraph{Ans} P = [[? input-number 1]] watts  199.65
+
+\paragraph{Hint 1}We are given the formula for the power consumed by the lamp when connected to a voltage $\blue{v}$:
+
+$\quad P=\purple{0.0165}\blue{v}^2$.
+
+We are also told that the wall outlet produces a voltage of $\blue{v=110}$ volts. 
+
+\paragraph{Hint 2}Plugging in the value $\blue{v=110}$ into the formula for the power we obtain the following expression:  
+
+\begin{align*}
+P 
+& =\purple{0.0165}\blue{v}^2 \\[1mm]
+& = \purple{0.0165}\left(\blue{110}\right)^2 \\[1mm]
+& = 0.0165\left(110\right)^{\green{2}}  \\[1mm]
+& = 0.0165\green{\cdot} 12100 \\[2mm]
+ &= 199.65
+\end{align*}
+
+Note the order of operations: we computed the exponent before taking the product.
+
+\paragraph{Hint 3}Therefore, the power consumed by the lamp is $P=199.65\approx 200$ watts.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - formulas, CC.6.EE.A.2}\\
+\textbf{Version:} f14ff716.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xfc9d7d96}{xfc9d7d96}}
+
+\noindent
+Marge is studying a chemical reaction in which molecules of type A are consumed. The number of molecules of type A remaining is described by the expression $N \cdot(\frac{1}{2})^t$, where $N$ represents the initial number of molecules and $t$ measures the time in minutes.
+
+If Marge's experiment starts with $64000$ molecules of type A, **how many molecules will be left after $6$  minutes?**
+
+\paragraph{Ans} [[? input-number 1]] molecules left  1000
+
+\paragraph{Hint 1}Let's use the formula to calculate the number of molecules left.  
+
+Number of molecules left = $\blue{N} \cdot(\frac{1}{2})^{\red{t}}$.
+
+We're told that the initial number of molecules is $\blue{N=64000}$ and asked to find how many are left after $\red{t=6}$ minutes. All we have to do is plug these numbers into the formula.
+
+\paragraph{Hint 2}After $\red{6}$ minutes have elapsed, the number of molecules left will be:  
+
+\begin{align*}
+\blue{64000} \cdot \left(\frac{1}{2} \right)^{\red{6}} 
+ & =\blue{64000} \left(\frac{1}{2^{\red{6}}}\right) \\
+ & =\blue{64000} \left(\frac{1}{2\cdot 2\cdot 2\cdot 2\cdot 2\cdot 2}\right) \\
+ & =\blue{64000} \left(\frac{1}{64}\right)  \\
+ & =\frac{64 \cdot 1000 }{64} 
+=\frac{\cancel{64} \cdot 1000}{\cancel{64}}  \\[1mm]
+ & = 1000
+\end{align*}
+
+
+\paragraph{Hint 3}After $\red{6}$ minutes have elapsed, there will be $1000$ molecules of type A left.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 863163d9.. 2013-07-23
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xfd3f07d2}{xfd3f07d2}}
+
+\noindent
+Sean decides to build a new light for his desk. He wants to wire together lots of little light bulbs to form a light cube. If the cube has $s$ lights on each side then it will require $s^3$ light bulbs to build. 
+
+Sean wants the light cube to have $8$ lights per side, and he also needs $10$ extra bulbs as spares. 
+**How many light bulbs should he purchase in total for this project?**
+
+\paragraph{Ans} [[? input-number 1]] lights  522
+
+\paragraph{Hint 1}The expression which describes the number of lights Sean needs to purchase is $\blue{s}^3 + 10$.
+
+\paragraph{Hint 2}We know the light has the shape of a cube with side $\blue{s}=\blue{8}$ so we can plug this number into the expression.
+
+The total number of lights required is
+
+\begin{align*}
+\blue{s}^3 + 10
+ & = \blue{8}^3 + 10  \\
+ & = \blue{8}\cdot\blue{8}\cdot\blue{8} + 10 \\
+ & = 512 + 10 \\
+ & = 522
+\end{align*}
+
+\paragraph{Hint 3}The total number of lights Sean needs is $522$.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, CC.6.EE.A.2c, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} af17b14d.. 2013-06-27
+\smallskip\hrule
+
+
+
+
+
+\section{\href{https://www.khanacademy.org/devadmin/content/items/xff628425}{xff628425}}
+
+\noindent
+The table you're working at keeps wobbling. You decide to fix it by making a thick pad of paper from folded sheets of paper. **Each time you fold a sheet in two, the number of layers doubles**. You fold a first sheet of paper $4$ times and stick it beneath the wobbly leg. It doesn't quite do the trick, so you fold another sheet of paper $3$ times and put it beneath the wobbly leg too. 
+
+**In total, how many layers of paper did it take to prop up the table?**
+
+\paragraph{Ans} [[? input-number 1]] layers  24
+
+\paragraph{Hint 1}Each time you fold the sheet, the number of layers doubles.  So a sheet which has been folded $\purple{n}$ times has $2^{\purple{n}}$ layers.
+
+The total number of layers of paper equals the layers in the first sheet plus the layers in the second sheet. 
+
+\paragraph{Hint 2}Let’s calculate the number of layers in the first sheet. 
+
+We multiply by $2$ for each fold in the sheet. After the $\purple{\textrm{fourth}}$ fold, the sheet will have $2 \cdot 2\cdot 2 \cdot 2=2^\purple{4}=\blue{16}$ layers.
+
+\paragraph{Hint 3}Similarly, the second sheet of paper will have $2\cdot 2 \cdot 2 = 2^\pink{3}=\green{8}$ layers, since it was folded $\pink{3}$ times.
+
+\paragraph{Hint 4}The total number of layers it took to prop-up the table is the sum of the layers from the two sheets:  $2^\purple{4} + 2^\pink{3} = \blue{16} + \green{8} = 24$ layers.
+
+
+
+\medskip
+\noindent
+\textbf{Tags:} {\footnotesize CC.6.EE.A.1, SB.6.1.E.1.CR, Evaluating exponential expressions, evaluating exp - context, CC.6.EE.A.2}\\
+\textbf{Version:} 3015584d.. 2013-06-27
+\smallskip\hrule
+
+
+
+%%  Create a directory called 'figures' in latex dir and run the following command 
+%  wget \
+
+
+\end{document}
